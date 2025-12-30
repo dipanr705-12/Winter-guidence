@@ -1,5 +1,4 @@
-@⁨ᗫĺק𝓪ₙ⁩ copy paste this section in your readme.md file 
-# ❄️ Winter Guidance
+❄️ Winter Guidance
 
 A professional web development project showcasing modern frontend techniques, responsive design, and clean code practices.
 
@@ -44,5 +43,3 @@ Distributed under the MIT License.
 Dipan GitHub: @dipanr705-12
 Project Link: https://github.com/dipanr705-12/Winter-guidence
 If you liked this project, feel free to leave a ⭐!
-
-**Next Step:** Would you like me to add a **"Screenshots"** section where you can display images of your website?
