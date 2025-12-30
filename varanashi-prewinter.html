@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Varanasi in Pre-Winter</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:linear-gradient(135deg,#ff8008,#ffc837);
+  color:white;
+  overflow-x:hidden;
+}
+
+/* Back button */
+.back-btn{
+  position:fixed;
+  top:15px;
+  left:15px;
+  padding:8px 16px;
+  border:none;
+  border-radius:20px;
+  background:#ffffff;
+  color:#7a2c00;
+  font-weight:bold;
+  cursor:pointer;
+  z-index:10;
+}
+
+/* Header */
+header{
+  text-align:center;
+  padding:80px 20px 30px;
+}
+
+header h1{
+  font-size:2.5rem;
+}
+
+header p{
+  margin-top:8px;
+  opacity:0.95;
+}
+
+/* Main container */
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:20px;
+}
+
+/* Card section */
+.card{
+  background:rgba(255,255,255,0.18);
+  border-radius:20px;
+  padding:20px;
+  margin-bottom:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  background:rgba(255,255,255,0.25);
+}
+
+.card h2{
+  margin-bottom:10px;
+}
+
+.card p{
+  font-size:15px;
+  line-height:1.6;
+}
+
+/* Places grid */
+.highlights{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:15px;
+  margin-top:15px;
+}
+
+.highlight{
+  background:rgba(255,255,255,0.25);
+  padding:15px;
+  border-radius:15px;
+  text-align:center;
+}
+
+.highlight span{
+  font-size:35px;
+  display:block;
+  margin-bottom:6px;
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:20px;
+  opacity:0.9;
+}
+
+/* Floating diya animation */
+.diya{
+  position:absolute;
+  top:-20px;
+  animation:fall linear infinite;
+}
+
+@keyframes fall{
+  to{ transform:translateY(110vh); }
+}
+</style>
+</head>
+
+<body>
+
+<button class="back-btn" onclick="history.back()">⬅ Back</button>
+
+<header>
+  <h1>🕉️ Varanasi in Pre-Winter 🕉️</h1>
+  <p>The spiritual heart of India on the banks of Ganga</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>🌸 About Varanasi</h2>
+    <p>
+      Varanasi, also known as Kashi or Banaras, is one of the oldest living cities
+      in the world. Situated on the banks of the holy River Ganga, it is the
+      spiritual capital of India and a major center of Hindu culture and tradition.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>🍁 Pre-Winter Weather</h2>
+    <p>
+      During pre-winter (October–November), Varanasi experiences pleasant days
+      and slightly cool nights. The weather is ideal for boat rides, temple visits,
+      and enjoying the famous Ganga Aarti without extreme heat or cold.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>📍 Places to Visit</h2>
+    <div class="highlights">
+      <div class="highlight">
+        <span>🛕</span>
+        Kashi Vishwanath
+      </div>
+      <div class="highlight">
+        <span>🔥</span>
+        Manikarnika Ghat
+      </div>
+      <div class="highlight">
+        <span>🌊</span>
+        Dashashwamedh Ghat
+      </div>
+      <div class="highlight">
+        <span>☸️</span>
+        Sarnath
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🎒 Why Visit in Pre-Winter?</h2>
+    <p>
+      ✔ Comfortable sightseeing weather<br>
+      ✔ Beautiful Ganga Aarti evenings<br>
+      ✔ Fewer crowds than peak season<br>
+      ✔ Best time for photography & boat rides
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 | Team Laksha Cracker
+</footer>
+
+<script>
+/* Floating diya effect */
+for(let i=0;i<35;i++){
+  let diya=document.createElement("div");
+  diya.className="diya";
+  diya.innerHTML="🪔";
+  diya.style.left=Math.random()*100+"vw";
+  diya.style.fontSize=Math.random()*14+16+"px";
+  diya.style.opacity=Math.random();
+  diya.style.animationDuration=Math.random()*6+6+"s";
+  document.body.appendChild(diya);
+}
+</script>
+
+</body>
+</html>

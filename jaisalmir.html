@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jaisalmer in Winter</title>
+<link rel="stylesheet" href="common.css">
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:linear-gradient(135deg,#f7971e,#ffd200);
+  color:#3a2500;
+}
+
+/* Back button */
+.back-btn{
+  position:fixed;
+  top:15px;
+  left:15px;
+  padding:8px 16px;
+  border:none;
+  border-radius:20px;
+  background:#fff;
+  color:#3a2500;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* Header */
+header{
+  text-align:center;
+  padding:80px 20px 30px;
+}
+
+header h1{
+  font-size:2.5rem;
+}
+
+header p{
+  margin-top:8px;
+  opacity:0.9;
+}
+
+/* Container */
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:20px;
+}
+
+/* Card */
+.card{
+  background:rgba(255,255,255,0.85);
+  border-radius:18px;
+  padding:20px;
+  margin-bottom:20px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+.card h2{
+  margin-bottom:10px;
+}
+
+.card p{
+  font-size:15px;
+  line-height:1.6;
+}
+
+/* Highlights */
+.highlights{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:15px;
+  margin-top:15px;
+}
+
+.highlight{
+  background:#fff;
+  padding:15px;
+  border-radius:15px;
+  text-align:center;
+}
+
+.highlight span{
+  font-size:32px;
+  display:block;
+  margin-bottom:6px;
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:20px;
+  font-size:14px;
+  opacity:0.9;
+}
+</style>
+</head>
+
+<body>
+
+<button class="back-btn" onclick="history.back()">⬅ Back</button>
+
+<header>
+  <h1>🏜️ Jaisalmer in Winter 🏜️</h1>
+  <p>The Golden City of Rajasthan</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>🏰 About Jaisalmer</h2>
+    <p>
+      Jaisalmer is a historic city located in the Thar Desert of Rajasthan.
+      It is famous for its golden sandstone architecture, forts, havelis,
+      and rich Rajasthani culture.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>❄️ Winter Weather</h2>
+    <p>
+      Winter (November to February) is the best time to visit Jaisalmer.
+      The weather is pleasant and cool, making sightseeing and desert
+      activities comfortable.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>📍 Places to Visit</h2>
+    <div class="highlights">
+      <div class="highlight">
+        <span>🏰</span>
+        Jaisalmer Fort
+      </div>
+      <div class="highlight">
+        <span>🏜️</span>
+        Sam Sand Dunes
+      </div>
+      <div class="highlight">
+        <span>🏠</span>
+        Patwon Ki Haveli
+      </div>
+      <div class="highlight">
+        <span>🎶</span>
+        Desert Camp
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🎒 Why Visit in Winter?</h2>
+    <p>
+      ✔ Pleasant weather for travel<br>
+      ✔ Best time for desert safari<br>
+      ✔ Cultural shows & festivals<br>
+      ✔ Beautiful sunsets in desert
+    </p>
+  </div>
+
+</div>
+<button class="back-btn" onclick="history.back()">⬅ Back</button>
+<footer>
+  © 2026 | Team laksha cracker
+</footer>
+
+</body>
+</html>

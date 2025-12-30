@@ -1,0 +1,231 @@
+.container {
+  position: relative;
+  z-index: 2;
+}
+.back-btn {
+  z-index: 3;
+}
+/* Full page winter background */
+.winter-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none; /* ✅ THIS FIXES BUTTON CLICK */
+}
+
+/* Big snowman */
+.snowman-big {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: snowmanBounce 3s infinite;
+}
+
+.snowman-big .hat {
+  width: 80px;
+  height: 18px;
+  background: black;
+  margin: auto;
+  border-radius: 4px;
+}
+
+.snowman-big .head {
+  width: 70px;
+  height: 70px;
+  background: white;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.snowman-big .body {
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: 50%;
+  margin: auto;
+}
+
+/* Children */
+.child {
+  position: absolute;
+  bottom: 60px;
+  font-size: 40px;
+  animation: play 6s infinite linear;
+}
+
+.child-left {
+  left: -50px;
+}
+
+.child-right {
+  right: -50px;
+  animation-direction: reverse;
+}
+
+/* Animations */
+@keyframes play {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(120px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes snowmanBounce {
+  0%,100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -8px); }
+}
+/* FIX BUTTON ALIGNMENT ONLY */
+.btn-group{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-top:10px;
+}
+/* ✨ Magic sparkle particles */
+.sparkle {
+  position: fixed;
+  font-size: 18px;
+  pointer-events: none;
+  animation: sparkleFly 1s ease-out forwards;
+  z-index: 5;
+}
+
+@keyframes sparkleFly {
+  0% {
+    transform: scale(0.5) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5) translateY(-60px);
+    opacity: 0;
+  }
+}
+
+/* Glow pulse on snowman */
+.magic-glow {
+  animation: glowPulse 0.6s ease;
+}
+
+@keyframes glowPulse {
+  0% { filter: drop-shadow(0 0 0px #fff); }
+  50% { filter: drop-shadow(0 0 25px #7fdcff); }
+  100% { filter: drop-shadow(0 0 0px #fff); }
+}
+/* Enable click ONLY on snowman */
+.snowman-big {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.winter-glow {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, #ffffff, transparent);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: glowPop 0.8s ease-out;
+}
+
+@keyframes glowPop {
+  from {
+    transform: scale(0);
+    opacity: 1;
+  }
+  to {
+    transform: scale(6);
+    opacity: 0;
+  }
+}
+
+
+/* HOLLOW SPACE CONTAINER */
+.winter-hollow-space {
+  width: 100%;
+  min-height: 260px;   /* ← hollow reserved space */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+/* CONTENT INSIDE HOLLOW SPACE */
+.pure-winter-intro {
+  max-width: 900px;
+  padding: 25px 30px;
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(255,255,255,0.25);
+
+  animation: softAppear 1.4s ease;
+}
+
+.pure-winter-intro h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  color: #eaf6ff;
+  text-shadow: 0 0 10px #bfe9ff;
+}
+
+.pure-winter-intro p {
+  font-size: 1.1rem;
+  color: #ffffff;
+  line-height: 1.7;
+}
+
+/* gentle appearance */
+@keyframes softAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* PREVENT TEXT COLLISION */
+.scroll-text {
+  display: block;
+  margin: 18px 0;
+  line-height: 1.8;
+  text-align: center;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+/* HARD SEPARATOR */
+.safe-space {
+  height: 40px;
+  width: 100%;
+  clear: both;
+}
+
+
+/* ===== DRAGGABLE SNOWMAN (STABLE) ===== */
+#magicSnowman {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+
+  width: 90px;
+  height: auto;
+
+  z-index: 9999;
+  cursor: grab;
+
+  touch-action: none;      /* REQUIRED for mobile */
+  user-select: none;
+
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+#magicSnowman.dragging {
+  cursor: grabbing;
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pre-Winter Festivals of India</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:linear-gradient(135deg,#ff512f,#f09819);
+  color:white;
+  overflow-x:hidden;
+}
+
+/* Back Button */
+.back-btn{
+  position:fixed;
+  top:15px;
+  left:15px;
+  padding:8px 16px;
+  border:none;
+  border-radius:20px;
+  background:white;
+  color:#8b2a00;
+  font-weight:bold;
+  cursor:pointer;
+  z-index:10;
+}
+
+/* Header */
+header{
+  text-align:center;
+  padding:80px 20px 30px;
+}
+
+header h1{
+  font-size:2.4rem;
+}
+
+header p{
+  margin-top:8px;
+  opacity:0.95;
+}
+
+/* Main Container */
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:20px;
+}
+
+/* Card */
+.card{
+  background:rgba(255,255,255,0.18);
+  border-radius:20px;
+  padding:20px;
+  margin-bottom:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  background:rgba(255,255,255,0.25);
+}
+
+.card h2{
+  margin-bottom:10px;
+}
+
+.card p{
+  line-height:1.6;
+  font-size:15px;
+}
+
+/* Festivals Grid */
+.festivals{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:15px;
+  margin-top:15px;
+}
+
+.festival{
+  background:rgba(255,255,255,0.25);
+  padding:15px;
+  border-radius:15px;
+  text-align:center;
+}
+
+.festival span{
+  font-size:36px;
+  display:block;
+  margin-bottom:6px;
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:20px;
+  opacity:0.85;
+}
+
+/* Confetti Animation */
+.confetti{
+  position:absolute;
+  top:-20px;
+  animation:fall linear infinite;
+}
+
+@keyframes fall{
+  to{ transform:translateY(110vh) rotate(360deg); }
+}
+</style>
+</head>
+
+<body>
+
+<button class="back-btn" onclick="history.back()">⬅ Back</button>
+
+<header>
+  <h1>🎊 Pre-Winter Festivals of India 🎊</h1>
+  <p>Celebrations that welcome joy before winter begins</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>🌼 About Pre-Winter Festivals</h2>
+    <p>
+      Pre-winter (October–November) is one of the most festive seasons in India.
+      Pleasant weather and cultural traditions bring people together through
+      colorful festivals celebrated across different states.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>🎉 Major Festivals</h2>
+    <div class="festivals">
+      <div class="festival">
+        <span>🪔</span>
+        Diwali<br><small>Festival of Lights</small>
+      </div>
+      <div class="festival">
+        <span>🛕</span>
+        Durga Puja<br><small>West Bengal</small>
+      </div>
+      <div class="festival">
+        <span>🎶</span>
+        Navratri<br><small>Garba & Dandiya</small>
+      </div>
+      <div class="festival">
+        <span>🌾</span>
+        Chhath Puja<br><small>Bihar & UP</small>
+      </div>
+      <div class="festival">
+        <span>🐂</span>
+        Govardhan Puja<br><small>Krishna Tradition</small>
+      </div>
+      <div class="festival">
+        <span>🕯️</span>
+        Kali Puja<br><small>Eastern India</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>✨ Why This Season is Special</h2>
+    <p>
+      ✔ Pleasant weather for celebrations<br>
+      ✔ Bright lights & decorations everywhere<br>
+      ✔ Cultural dances, music & rituals<br>
+      ✔ Perfect time for travel & festivals tourism
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 | Team Laksha Cracker
+</footer>
+
+<script>
+/* Confetti animation */
+for(let i=0;i<35;i++){
+  let conf=document.createElement("div");
+  conf.className="confetti";
+  conf.innerHTML="🎉";
+  conf.style.left=Math.random()*100+"vw";
+  conf.style.fontSize=Math.random()*14+16+"px";
+  conf.style.opacity=Math.random();
+  conf.style.animationDuration=Math.random()*6+6+"s";
+  document.body.appendChild(conf);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rishikesh in Winter</title>
+<link rel="stylesheet" href="common.css">
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:linear-gradient(135deg,#56ab2f,#a8e063);
+  color:#1f3d1f;
+  overflow-x:hidden;
+}
+
+/* Back button */
+.back-btn{
+  position:fixed;
+  top:15px;
+  left:15px;
+  padding:8px 16px;
+  border:none;
+  border-radius:20px;
+  background:#fff;
+  color:#1f3d1f;
+  font-weight:bold;
+  cursor:pointer;
+  z-index:10;
+}
+
+/* Header */
+header{
+  text-align:center;
+  padding:80px 20px 30px;
+}
+
+header h1{
+  font-size:2.5rem;
+}
+
+header p{
+  margin-top:8px;
+  opacity:0.85;
+}
+
+/* Container */
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:20px;
+}
+
+/* Card */
+.card{
+  background:rgba(255,255,255,0.9);
+  border-radius:18px;
+  padding:20px;
+  margin-bottom:20px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+.card h2{
+  margin-bottom:10px;
+}
+
+.card p{
+  font-size:15px;
+  line-height:1.6;
+}
+
+/* Highlights */
+.highlights{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:15px;
+  margin-top:15px;
+}
+
+.highlight{
+  background:#fff;
+  padding:15px;
+  border-radius:15px;
+  text-align:center;
+}
+
+.highlight span{
+  font-size:32px;
+  display:block;
+  margin-bottom:6px;
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:20px;
+  font-size:14px;
+  opacity:0.9;
+}
+
+/* 🍃 Falling Effect */
+.fall{
+  position:absolute;
+  top:-20px;
+  animation:fall linear infinite;
+  pointer-events:none;
+}
+
+@keyframes fall{
+  to{
+    transform:translateY(110vh) rotate(360deg);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<button class="back-btn" onclick="history.back()">⬅ Back</button>
+
+<header>
+  <h1>🧘 Rishikesh in Winter 🧘</h1>
+  <p>Yoga • Spirituality • Ganga • Peace</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>🌿 About Rishikesh</h2>
+    <p>
+      Rishikesh, located in Uttarakhand, is known as the Yoga Capital of the World.
+      It lies on the banks of the holy River Ganga and is famous for spirituality,
+      meditation, and adventure activities.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>❄️ Winter Weather</h2>
+    <p>
+      Winter (November to February) in Rishikesh is cool and pleasant.
+      The calm weather makes it ideal for yoga retreats, sightseeing,
+      and peaceful spiritual experiences.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>📍 Places to Visit</h2>
+    <div class="highlights">
+      <div class="highlight">
+        <span>🌉</span>
+        Laxman Jhula
+      </div>
+      <div class="highlight">
+        <span>🔥</span>
+        Ganga Aarti
+      </div>
+      <div class="highlight">
+        <span>🧘</span>
+        Yoga Ashrams
+      </div>
+      <div class="highlight">
+        <span>🏞️</span>
+        River Ganga
+      </div>
+    </div>
+  </div>
+  <button class="back-btn" onclick="history.back()">⬅ Back</button>
+
+  <div class="card">
+    <h2>🎒 Why Visit in Winter?</h2>
+    <p>
+      ✔ Peaceful environment<br>
+      ✔ Perfect season for yoga & meditation<br>
+      ✔ Comfortable weather for travel<br>
+      ✔ Beautiful evening Ganga Aarti
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 |  Team laksha cracker
+</footer>
+
+<script>
+/* 🍃 Soft falling leaf effect */
+for(let i=0;i<30;i++){
+  let leaf=document.createElement("div");
+  leaf.className="fall";
+  leaf.innerHTML="🍃";
+  leaf.style.left=Math.random()*100+"vw";
+  leaf.style.fontSize=Math.random()*14+14+"px";
+  leaf.style.opacity=Math.random();
+  leaf.style.animationDuration=Math.random()*6+6+"s";
+  document.body.appendChild(leaf);
+}
+</script>
+
+</body>
+</html>

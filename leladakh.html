@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leh–Ladakh in Winter</title>
+<link rel="stylesheet" href="common.css">
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:linear-gradient(135deg,#232526,#414345);
+  color:#f1f1f1;
+  overflow-x:hidden;
+}
+
+/* Back button */
+.back-btn{
+  position:fixed;
+  top:15px;
+  left:15px;
+  padding:8px 16px;
+  border:none;
+  border-radius:20px;
+  background:#fff;
+  color:#232526;
+  font-weight:bold;
+  cursor:pointer;
+  z-index:10;
+}
+
+/* Header */
+header{
+  text-align:center;
+  padding:80px 20px 30px;
+}
+
+header h1{
+  font-size:2.5rem;
+}
+
+header p{
+  margin-top:8px;
+  opacity:0.85;
+}
+
+/* Container */
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:20px;
+}
+
+/* Card */
+.card{
+  background:rgba(255,255,255,0.12);
+  border-radius:18px;
+  padding:20px;
+  margin-bottom:20px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.35);
+}
+
+.card h2{
+  margin-bottom:10px;
+}
+
+.card p{
+  font-size:15px;
+  line-height:1.6;
+}
+
+/* Highlights */
+.highlights{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:15px;
+  margin-top:15px;
+}
+
+.highlight{
+  background:rgba(255,255,255,0.2);
+  padding:15px;
+  border-radius:15px;
+  text-align:center;
+}
+
+.highlight span{
+  font-size:32px;
+  display:block;
+  margin-bottom:6px;
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:20px;
+  font-size:14px;
+  opacity:0.9;
+}
+
+/* ❄️ Falling Snow */
+.snow{
+  position:absolute;
+  top:-20px;
+  animation:snowfall linear infinite;
+  pointer-events:none;
+}
+
+@keyframes snowfall{
+  to{
+    transform:translateY(110vh);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<button class="back-btn" onclick="history.back()">⬅ Back</button>
+
+<header>
+  <h1>🏔️ Leh–Ladakh in Winter 🏔️</h1>
+  <p>Frozen Lakes • Snow Deserts • Extreme Beauty</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>🏔️ About Leh–Ladakh</h2>
+    <p>
+      Leh–Ladakh is a high-altitude region in northern India, famous for its rugged
+      mountains, monasteries, and unique landscapes. In winter, it turns into a
+      frozen desert with breathtaking beauty.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>❄️ Winter Weather</h2>
+    <p>
+      Winter (December to February) in Ladakh is extremely cold, with temperatures
+      often dropping below -20°C. Snowfall covers the region, creating stunning
+      white landscapes.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>📍 Winter Attractions</h2>
+    <div class="highlights">
+      <div class="highlight">
+        <span>❄️</span>
+        Frozen Lakes
+      </div>
+      <div class="highlight">
+        <span>🥾</span>
+        Chadar Trek
+      </div>
+      <div class="highlight">
+        <span>🛕</span>
+        Monasteries
+      </div>
+      <div class="highlight">
+        <span>📸</span>
+        Snow Views
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🎒 Why Visit in Winter?</h2>
+    <p>
+      ✔ Experience extreme winter adventure<br>
+      ✔ Famous Chadar Trek on frozen river<br>
+      ✔ Peaceful monasteries in snow<br>
+      ✔ Unique winter landscapes
+    </p>
+  </div>
+
+</div>
+<button class="back-btn" onclick="history.back()">⬅ Back</button>
+<footer>
+  © 2026 |  Team laksha cracker
+</footer>
+
+<script>
+/* ❄️ Falling snow effect */
+for(let i=0;i<40;i++){
+  let snow=document.createElement("div");
+  snow.className="snow";
+  snow.innerHTML="❄️";
+  snow.style.left=Math.random()*100+"vw";
+  snow.style.fontSize=Math.random()*14+10+"px";
+  snow.style.opacity=Math.random();
+  snow.style.animationDuration=Math.random()*6+6+"s";
+  document.body.appendChild(snow);
+}
+</script>
+
+</body>
+</html>

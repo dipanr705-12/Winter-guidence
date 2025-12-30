@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Winter Leisure Fun</title>
+<link rel="stylesheet" href="common.css">
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Comic Sans MS','Segoe UI',sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:linear-gradient(135deg,#ff9a9e,#fad0c4,#a1c4fd,#c2e9fb);
+  animation:bgMove 10s infinite alternate;
+  overflow-x:hidden;
+}
+
+@keyframes bgMove{
+  0%{background-position:0% 50%;}
+  100%{background-position:100% 50%;}
+}
+
+/* Header */
+header{
+  text-align:center;
+  padding:80px 20px 40px;
+  color:#fff;
+  text-shadow:2px 2px 6px rgba(0,0,0,0.3);
+}
+
+header h1{
+  font-size:3rem;
+  animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-12px);}
+}
+
+header p{
+  font-size:18px;
+  margin-top:10px;
+}
+
+/* Container */
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+
+/* Cards */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:white;
+  border-radius:25px;
+  padding:25px;
+  text-align:center;
+  box-shadow:0 15px 30px rgba(0,0,0,0.25);
+  transition:transform 0.4s, box-shadow 0.4s;
+  position:relative;
+  overflow:hidden;
+}
+
+.card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle,rgba(255,255,255,0.6),transparent);
+  opacity:0;
+  transition:0.4s;
+}
+
+.card:hover::before{
+  opacity:1;
+}
+
+.card:hover{
+  transform:rotate(-2deg) scale(1.08);
+  box-shadow:0 25px 45px rgba(0,0,0,0.4);
+}
+
+.icon{
+  font-size:50px;
+  animation:float 3s infinite;
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-10px);}
+}
+
+.card h2{
+  margin:15px 0 10px;
+  color:#ff6f61;
+}
+
+.card p{
+  font-size:14px;
+  color:#333;
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:25px;
+  font-size:14px;
+  color:white;
+}
+
+/* Confetti */
+.confetti{
+  position:fixed;
+  top:-20px;
+  font-size:18px;
+  pointer-events:none;
+  animation:confettiFall linear infinite;
+}
+
+@keyframes confettiFall{
+  to{
+    transform:translateY(110vh) rotate(360deg);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>❄️ Winter Leisure Fun ❄️</h1>
+  <p>Relax • Play • Enjoy the Winter Season</p>
+</header>
+
+<div class="container">
+  <div class="grid">
+
+    <div class="card">
+      <div class="icon">☕</div>
+      <h2>Hot Drinks</h2>
+      <p>Enjoy tea, coffee, and hot chocolate to stay warm and relaxed.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📚</div>
+      <h2>Reading Books</h2>
+      <p>Winter is perfect for reading stories, comics, and novels indoors.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🎮</div>
+      <h2>Indoor Games</h2>
+      <p>Play video games, board games, and puzzles with family and friends.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🎨</div>
+      <h2>Creative Time</h2>
+      <p>Drawing, painting, and crafts make winter fun and colorful.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🎬</div>
+      <h2>Movies & Music</h2>
+      <p>Watch movies and listen to music while enjoying cozy winter vibes.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">❄️</div>
+      <h2>Fun Outdoors</h2>
+      <p>Enjoy sunshine, short walks, and light winter games.</p>
+    </div>
+
+  </div>
+</div>
+<button class="back-btn" onclick="history.back()">⬅ Back</button>
+<footer>
+  © 2026 | Team laksha cracker
+</footer>
+
+<script>
+/* 🎉 Confetti effect */
+const icons = ["❄️","✨","🎉","⭐","☃️"];
+for(let i=0;i<50;i++){
+  let c=document.createElement("div");
+  c.className="confetti";
+  c.innerHTML=icons[Math.floor(Math.random()*icons.length)];
+  c.style.left=Math.random()*100+"vw";
+  c.style.animationDuration=Math.random()*5+5+"s";
+  c.style.opacity=Math.random();
+  document.body.appendChild(c);
+}
+</script>
+
+</body>
+</html>

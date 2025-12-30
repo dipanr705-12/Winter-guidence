@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+  background: linear-gradient(135deg, #1d2671, #c33764);
+  color: white;
+  min-height: 100vh;
+  overflow: hidden; /* required for snow */
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 2.2rem;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.green { border-left: 5px solid #00ff9d; }
+.yellow { border-left: 5px solid #ffd000; }
+.blue { border-left: 5px solid #00c3ff; }
+.red { border-left: 5px solid #ff4b4b; }
+
+.alerts {
+  padding: 20px;
+}
+
+.alerts ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.alerts li {
+  background: rgba(0,0,0,0.3);
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* ========================= */
+/* ❄️ SNOW EFFECT STARTS HERE */
+/* ========================= */
+
+.snowflake {
+  position: fixed;
+  top: -10px;
+  color: white;
+  user-select: none;
+  pointer-events: none;
+  z-index: 9999;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+  }
+}
+.season-btn {
+  padding: 14px 28px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  box-shadow: 0 8px 0 rgba(0,0,0,0.25);
+  transition: all 0.25s ease;
+}
+
+/* Pre-Winter button */
+.prewinter {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+}
+
+/* Winter button */
+.winter {
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  color: #003366;
+}
+
+/* Hover effect */
+.season-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 14px 0 rgba(0,0,0,0.3);
+}
+
+/* Click effect */
+.season-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px 0 rgba(0,0,0,0.25);
+}
+/* Floating Helpline Button */
+.helpline-btn{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #ff3b3b;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  z-index: 999;
+  animation: pulse 1.5s infinite;
+}
+
+/* Hover effect */
+.helpline-btn:hover{
+  background: #ffffff;
+  color: #ff3b3b;
+}
+
+/* Pulse animation */
+@keyframes pulse{
+  0%{ transform: scale(1); }
+  50%{ transform: scale(1.08); }
+  100%{ transform: scale(1); }
+}
+
+/* ✨ Glowing card pulse */
+.card {
+  animation: glowPulse 3s infinite alternate;
+}
+
+@keyframes glowPulse {
+  from {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  }
+  to {
+    box-shadow: 0 0 30px rgba(255,255,255,0.4);
+  }
+}
+
+/* 🌈 Floating Emoji Layer (FIX) */
+.floating-emoji {
+  position: fixed;
+  bottom: -40px;
+  font-size: 26px;
+  pointer-events: none;
+  z-index: 99999; /* ABOVE EVERYTHING */
+  animation: emojiFloat 7s linear forwards;
+}
+
+@keyframes emojiFloat {
+  0% {
+    transform: translateY(0) scale(0.6) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120vh) scale(1.4) rotate(360deg);
+    opacity: 0;
+  }
+}
+/* ⭐ Floating Rating Button (LEFT BOTTOM) */
+.rating-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;   /* 👈 moved to left */
+  background: linear-gradient(135deg, gold, orange);
+  color: black;
+  padding: 12px 16px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 9999;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.rating-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}

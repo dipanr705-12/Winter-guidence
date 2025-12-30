@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gulmarg in Winter</title>
+<link rel="stylesheet" href="common.css">
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:linear-gradient(135deg,#1e3c72,#2a5298);
+  color:white;
+  overflow-x:hidden;
+}
+
+/* Back button */
+.back-btn{
+  position:fixed;
+  top:15px;
+  left:15px;
+  padding:8px 16px;
+  border:none;
+  border-radius:20px;
+  background:#ffffff;
+  color:#1e3c72;
+  font-weight:bold;
+  cursor:pointer;
+  z-index:20;
+}
+
+/* Header */
+header{
+  text-align:center;
+  padding:80px 20px 30px;
+  position:relative;
+  z-index:5;
+}
+
+header h1{
+  font-size:2.5rem;
+}
+
+header p{
+  margin-top:8px;
+  opacity:0.95;
+}
+
+/* Main container */
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:20px;
+  position:relative;
+  z-index:5;
+}
+
+/* Card */
+.card{
+  background:rgba(255,255,255,0.18);
+  border-radius:20px;
+  padding:20px;
+  margin-bottom:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  background:rgba(255,255,255,0.25);
+}
+
+.card p{
+  font-size:15px;
+  line-height:1.6;
+}
+
+/* Grid */
+.highlights{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:15px;
+  margin-top:15px;
+}
+
+.highlight{
+  background:rgba(255,255,255,0.25);
+  padding:15px;
+  border-radius:15px;
+  text-align:center;
+}
+
+.highlight span{
+  font-size:35px;
+  display:block;
+  margin-bottom:6px;
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:20px;
+  opacity:0.9;
+  position:relative;
+  z-index:5;
+}
+
+/* ❄️ Snow */
+.snow{
+  position:absolute;
+  top:-20px;
+  animation:snowfall linear infinite;
+  pointer-events:none;
+}
+
+@keyframes snowfall{
+  to{
+    transform:translateY(110vh) translateX(60px);
+  }
+}
+
+/* 🌩️ Lightning Flash */
+.flash{
+  position:fixed;
+  inset:0;
+  background:white;
+  opacity:0;
+  z-index:15;
+  pointer-events:none;
+}
+
+/* 🌪️ Wind Overlay */
+.wind{
+  position:fixed;
+  inset:0;
+  background:linear-gradient(120deg, transparent, rgba(255,255,255,0.07), transparent);
+  animation:windMove 4s linear infinite;
+  z-index:2;
+  pointer-events:none;
+}
+
+@keyframes windMove{
+  from{transform:translateX(-100%);}
+  to{transform:translateX(100%);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="flash" id="flash"></div>
+<div class="wind"></div>
+
+<button class="back-btn" onclick="history.back()">⬅ Back</button>
+
+<header>
+  <h1>❄️ Gulmarg in Winter ❄️</h1>
+  <p>Snow Storm • Skiing Capital of India</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>🏔️ About Gulmarg</h2>
+    <p>
+      Gulmarg is a famous hill station in Jammu & Kashmir.
+      In winter, heavy snowfall and storms transform it into a white paradise.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>🌩️ Winter Storm Climate</h2>
+    <p>
+      Gulmarg experiences snowstorms, freezing winds, and dramatic weather during
+      peak winter. This adds thrill and beauty to the destination.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>📍 Winter Attractions</h2>
+    <div class="highlights">
+      <div class="highlight"><span>⛷️</span>Skiing</div>
+      <div class="highlight"><span>🚡</span>Gondola</div>
+      <div class="highlight"><span>❄️</span>Snowfall</div>
+      <div class="highlight"><span>📸</span>Photography</div>
+    </div>
+  </div>
+
+</div>
+<button class="back-btn" onclick="history.back()">⬅ Back</button>
+<footer>
+  © 2026 | Team Laksha Cracker
+</footer>
+
+<script>
+/* ❄️ Heavy Snow */
+for(let i=0;i<60;i++){
+  let snow=document.createElement("div");
+  snow.className="snow";
+  snow.innerHTML="❄️";
+  snow.style.left=Math.random()*100+"vw";
+  snow.style.fontSize=Math.random()*14+10+"px";
+  snow.style.opacity=Math.random();
+  snow.style.animationDuration=Math.random()*5+4+"s";
+  document.body.appendChild(snow);
+}
+
+/* 🌩️ Lightning Storm */
+function lightning(){
+  const flash=document.getElementById("flash");
+  flash.style.opacity=0.8;
+  setTimeout(()=>flash.style.opacity=0,120);
+}
+
+setInterval(()=>{
+  if(Math.random()>0.6){
+    lightning();
+  }
+},3000);
+</script>
+
+</body>
+</html>

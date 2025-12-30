@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- ✅ ZOOM OUT FIX (ONLY CHANGE MADE) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>wintergidence/httyr98/lakshacracker</title>
+  <link rel="stylesheet" href="style45t.css">
+
+  <!-- SCROLL FIX (SAFE) -->
+  <style>
+    html, body {
+      height: auto;
+      min-height: 100%;
+      overflow-y: auto;
+    }
+
+    body {
+      position: relative;
+    }
+
+    /* Winter info section spacing */
+    .winter-info {
+      padding: 20px;
+      margin: 20px;
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 12px;
+    }
+
+    .winter-info h2 {
+      margin-bottom: 10px;
+    }
+
+    .winter-info ul {
+      padding-left: 20px;
+    }
+
+    .winter-info li {
+      margin-bottom: 8px;
+    }
+
+    /* Snowflakes should not block scrolling */
+    .snowflake {
+      position: fixed;
+      top: -20px;
+      pointer-events: none;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>winter guidance</h1>
+    <p>Basically it usable in India</p>
+  </header>
+
+  <!-- Winter Season Important Points -->
+  <section class="winter-info">
+    <h2>Important Things About Winter Season</h2>
+    <ul>
+      <li>Winter is the coldest season of the year.</li>
+      <li>In India, winter usually lasts from December to February.</li>
+      <li>Days are cool and nights are very cold.</li>
+      <li>Fog and frost are common in many regions.</li>
+      <li>People wear warm clothes like sweaters, jackets, caps, and gloves.</li>
+      <li>Hot food and drinks such as soup, tea, and milk are preferred.</li>
+      <li>Common health problems include cold, cough, and flu.</li>
+      <li>Rabi crops like wheat and mustard grow in winter.</li>
+      <li>Many trees shed their leaves during this season.</li>
+      <li>Winter festivals include Christmas, New Year, Lohri, Makar Sankranti, and Pongal.</li>
+    </ul>
+  </section>
+
+  <section class="dashboard">
+    <div class="card green">
+      <h2>
+        <a href="page12middle.html">
+          <button class="season-btn prewinter">❄ Pre-Winter</button>
+        </a>
+      </h2>
+      <p>Official Seasons : <span id="lightStatus">November and December</span></p>
+    </div>
+
+    <div class="card yellow">
+      <h2>
+        <a href="page13middle.html">
+          <button class="season-btn winter">☃ Winter</button>
+        </a>
+      </h2>
+      <p>Official Seasons : <span>January and February</span></p>
+    </div>
+<a href="login.html" style="
+position:fixed;
+top:15px;
+right:15px;
+background:#ff9800;
+padding:10px 15px;
+border-radius:20px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+z-index:9999;">
+👤 Login
+</a>
+ 
+</button>
+    <!-- Helpline Floating Button -->
+    <a href="helpline2.html" class="helpline-btn">
+      🆘 Helpline
+    </a>
+    <!-- ⭐ Floating Rating Button -->
+<a href="rating.html" class="rating-btn">
+  ⭐ Rate Us
+</a>
+  </section>
+
+  <footer>
+    <p>© 2⁰2⁶ | Team laksha cracker</p>
+  </footer>
+
+  <script src="jsr568.js"></script>
+
+  <!-- Snow Animation -->
+  <script>
+    const snowCount = 80;
+
+    for (let i = 0; i < snowCount; i++) {
+      const snow = document.createElement("div");
+      snow.className = "snowflake";
+      snow.innerHTML = "❄";
+
+      snow.style.left = Math.random() * 100 + "vw";
+      snow.style.fontSize = Math.random() * 15 + 10 + "px";
+      snow.style.opacity = Math.random();
+      snow.style.animationDuration = Math.random() * 5 + 5 + "s";
+      snow.style.animationDelay = Math.random() * 5 + "s";
+
+      document.body.appendChild(snow);
+    }
+  </script>
+      <script>
+/* ✨ Mouse sparkle effect */
+document.addEventListener("mousemove", e => {
+  const spark = document.createElement("div");
+  spark.innerHTML = "✨";
+  spark.style.position = "fixed";
+  spark.style.left = e.clientX + "px";
+  spark.style.top = e.clientY + "px";
+  spark.style.pointerEvents = "none";
+  spark.style.fontSize = "14px";
+  spark.style.opacity = 1;
+  spark.style.transition = "transform 0.8s, opacity 0.8s";
+  spark.style.zIndex = 9999;
+
+  document.body.appendChild(spark);
+
+  requestAnimationFrame(() => {
+    spark.style.transform = "translateY(-20px) scale(1.5)";
+    spark.style.opacity = 0;
+  });
+
+  setTimeout(() => spark.remove(), 800);
+});
+</script>
+
+      
+      <script>
+/* 🌟 FIXED Floating Emoji Effect */
+const floatingEmojis = ["☃️","❄️","🎄","✨","🧤","🎿","🧣"];
+
+setInterval(() => {
+  const emoji = document.createElement("div");
+  emoji.className = "floating-emoji";
+  emoji.innerText = floatingEmojis[Math.floor(Math.random() * floatingEmojis.length)];
+
+  emoji.style.left = Math.random() * 100 + "vw";
+
+  document.body.appendChild(emoji);
+
+  setTimeout(() => {
+    emoji.remove();
+  }, 7000);
+}, 1200);
+</script>
+      <script>
+const user = localStorage.getItem("loggedUser");
+if(user){
+  const div = document.createElement("div");
+  div.innerHTML = "Welcome, " + user;
+  div.style.position = "fixed";
+  div.style.bottom = "20px";
+  div.style.left = "20px";
+  div.style.background = "#4CAF50";
+  div.style.color = "#fff";
+  div.style.padding = "8px 14px";
+  div.style.borderRadius = "20px";
+  document.body.appendChild(div);
+}
+</script>
+</body>
+</html>

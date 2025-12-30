@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Darjeeling in Pre-Winter</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:linear-gradient(135deg,#1e3c72,#2a5298);
+  color:white;
+  overflow-x:hidden;
+}
+
+/* Back button */
+.back-btn{
+  position:fixed;
+  top:15px;
+  left:15px;
+  padding:8px 16px;
+  border:none;
+  border-radius:20px;
+  background:#00c6ff;
+  color:black;
+  font-weight:bold;
+  cursor:pointer;
+  z-index:10;
+}
+
+/* Header */
+header{
+  text-align:center;
+  padding:80px 20px 30px;
+}
+
+header h1{
+  font-size:2.5rem;
+}
+
+header p{
+  margin-top:8px;
+  opacity:0.9;
+}
+
+/* Main container */
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:20px;
+}
+
+/* Section card */
+.card{
+  background:rgba(255,255,255,0.15);
+  border-radius:20px;
+  padding:20px;
+  margin-bottom:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  background:rgba(255,255,255,0.22);
+}
+
+.card h2{
+  margin-bottom:10px;
+}
+
+.card p{
+  font-size:15px;
+  line-height:1.6;
+}
+
+/* Highlights */
+.highlights{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:15px;
+  margin-top:15px;
+}
+
+.highlight{
+  background:rgba(255,255,255,0.2);
+  padding:15px;
+  border-radius:15px;
+  text-align:center;
+}
+
+.highlight span{
+  font-size:35px;
+  display:block;
+  margin-bottom:6px;
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:20px;
+  opacity:0.8;
+}
+
+/* Snowfall */
+.snow{
+  position:absolute;
+  top:-20px;
+  color:white;
+  animation:fall linear infinite;
+}
+
+@keyframes fall{
+  to{ transform:translateY(110vh); }
+}
+</style>
+</head>
+
+<body>
+
+<button class="back-btn" onclick="history.back()">⬅ Back</button>
+
+<header>
+  <h1>❄️ Darjeeling in Pre-Winter ❄️</h1>
+  <p>The Queen of Hills before deep winter begins</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>🌄 About Darjeeling</h2>
+    <p>
+      Darjeeling is a beautiful hill station in West Bengal, India.
+      It is famous for its tea gardens, toy train, and stunning views
+      of the Kanchenjunga mountain.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>🍁 Pre-Winter Weather</h2>
+    <p>
+      During pre-winter (October–November), Darjeeling has cool and
+      pleasant weather. Days are fresh and sunny, while nights are chilly.
+      Light mist and fog add magical beauty to the hills.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>📍 Places to Visit</h2>
+    <div class="highlights">
+      <div class="highlight">
+        <span>🚂</span>
+        Darjeeling Toy Train
+      </div>
+      <div class="highlight">
+        <span>🏔️</span>
+        Tiger Hill Sunrise
+      </div>
+      <div class="highlight">
+        <span>🍃</span>
+        Tea Gardens
+      </div>
+      <div class="highlight">
+        <span>🛕</span>
+        Ghoom Monastery
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🎒 Why Visit in Pre-Winter?</h2>
+    <p>
+      ✔ Clear mountain views<br>
+      ✔ Less crowd than peak winter<br>
+      ✔ Comfortable sightseeing weather<br>
+      ✔ Best time for photography and nature walks
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 | Team Laksha Cracker
+</footer>
+
+<script>
+/* Snowfall animation */
+for(let i=0;i<50;i++){
+  let snow=document.createElement("div");
+  snow.className="snow";
+  snow.innerHTML="❄";
+  snow.style.left=Math.random()*100+"vw";
+  snow.style.fontSize=Math.random()*15+10+"px";
+  snow.style.opacity=Math.random();
+  snow.style.animationDuration=Math.random()*5+5+"s";
+  document.body.appendChild(snow);
+}
+</script>
+
+</body>
+</html>

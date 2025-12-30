@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cycling – Basic Information</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
+    body{
+      background: linear-gradient(135deg, #232526, #414345);
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    /* Back Button */
+    .back-btn{
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      padding: 8px 16px;
+      background: #00ffcc;
+      color: #000;
+      border: none;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    header{
+      text-align: center;
+      padding: 60px 20px 25px;
+      background: rgba(0,0,0,0.35);
+    }
+
+    header h1{
+      font-size: 2.4rem;
+      color: #ffeb3b;
+    }
+
+    header p{
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    .container{
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .section{
+      background: rgba(255,255,255,0.15);
+      padding: 18px;
+      border-radius: 14px;
+      margin-bottom: 20px;
+    }
+
+    .section h2{
+      color: #00ffcc;
+      margin-bottom: 10px;
+    }
+
+    ul{
+      margin-left: 20px;
+    }
+
+    li{
+      margin-bottom: 6px;
+    }
+
+    footer{
+      text-align: center;
+      padding: 15px;
+      background: rgba(0,0,0,0.35);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<button class="back-btn" onclick="history.back()">⬅ Back</button>
+
+<header>
+  <h1>🚴 Cycling</h1>
+  <p>Healthy, Eco-Friendly, Fun</p>
+</header>
+
+<div class="container">
+
+  <div class="section">
+    <h2>What is Cycling?</h2>
+    <p>
+      Cycling is a physical activity where a person rides a bicycle for
+      transportation, fitness, or recreation. It is suitable for all ages.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Benefits of Cycling</h2>
+    <ul>
+      <li>Improves cardiovascular health</li>
+      <li>Strengthens leg muscles</li>
+      <li>Reduces stress</li>
+      <li>Environment-friendly</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Types of Cycling</h2>
+    <ul>
+      <li>Road Cycling</li>
+      <li>Mountain Biking</li>
+      <li>Track Cycling</li>
+      <li>Recreational Cycling</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Safety Tips</h2>
+    <ul>
+      <li>Wear a helmet</li>
+      <li>Follow traffic rules</li>
+      <li>Use reflectors and lights</li>
+      <li>Maintain your bicycle regularly</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 | Team laksha cracker
+</footer>
+
+</body>
+</html>

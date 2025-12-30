@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>wintergidence/httyr98/lakshacracker/3</title>
+<link rel="stylesheet" href="1buttonforsfl.css">
+    <link rel="stylesheet" href="snowman23.css">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  justify-content: center;
+    align-items: flex-start; 
+  padding-top: 70px; 
+  color: white;
+}
+
+/* Back Button */
+.back-btn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: #00c6ff;
+  color: black;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background: white;
+  transform: scale(1.05);
+}
+
+.container {
+  width: 90%;
+  max-width: 420px;
+  padding: 25px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.12);
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+h1 {
+  margin-bottom: 15px;
+}
+
+.slide-box {
+  min-height: 120px;
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 1;
+  transition: opacity 0.7s ease-in-out;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Back Button -->
+<button class="back-btn" onclick="goBack()">⬅ Back</button>
+
+<div class="container">
+  <h3>❄️Winter Season ❄️</h3>
+
+  <div id="slide" class="slide-box">
+  Duration: Mid-November to February/early March.
+  </div>
+  <div class="btn-group">
+ 
+  <a href="leiser43.html">
+     <button class="fun-btn leisure">Leisure</button>
+  </a>
+        <a href="festivels3e.html">
+     <button class="fun-btn festivals">Festivals</button>
+  </a>
+    
+  <a href="sports2.html">
+    <button class="fun-btn sports">Sports</button>
+  </a>
+
+  <a href="turistspot2.html">
+    <button class="fun-btn tourist">Tourist Spots</button>
+  </a>
+</div>
+  <!-- Winter Playground Background -->
+<div class="winter-bg">
+  <div class="snowman-big" id="magicSnowman">
+    <div class="hat"></div>
+    <div class="head"></div>
+    <div class="body"></div>
+  </div>
+</div> <!-- ✅ CLOSE winter-bg -->
+  <div class="safe-space"></div>
+  
+<p class="scroll-text">
+  ❄️ Beauty of Winter ❄️
+</p>
+
+<p class="scroll-text">
+  Winter transforms nature into a calm and beautiful world.
+  Foggy mornings, clear blue skies, and chilly nights
+  create a peaceful atmosphere loved by everyone.
+</p>
+
+<p class="scroll-text">
+  ❄️ Winter Lifestyle ❄️
+</p>
+
+<p class="scroll-text">
+  People wear warm clothes, enjoy hot drinks,
+  and spend cozy evenings with family.
+  Winter encourages togetherness and comfort.
+</p>
+
+<p class="scroll-text">
+  ❄️ Winter for Travel ❄️
+</p>
+
+<p class="scroll-text">
+  This season is perfect for travel and outdoor fun.
+  Hill stations receive snow, plains stay pleasant,
+  and festivals make winter joyful and colorful.
+</p>
+
+<p class="scroll-text">
+  ❄️ Winter Feelings ❄️
+</p>
+
+<p class="scroll-text">
+  Winter brings calmness, freshness, and happiness.
+  It gives relief from heat and fills life with peace,
+  joy, and beautiful memories.
+</p>
+<script>
+const texts = [
+ "Coldest Months: December and January.",
+  "Weather: Clear skies, low humidity, pleasant days, cold nights, cool northeast winds.",
+  "Regional Variation:North: Coldest, frost common, Himalayas get snow.South/Coasts: Milder, pleasant, great for tourism.",
+  "Key Feature: Dry season as winds blow land-to-sea, except for winter rain (cyclonic disturbances) in North, helping rabi crops.",
+  "Lifestyle: Woolens needed, people enjoy hearty food, festivals (Christmas, New Year).",
+  "Relief: A welcome break from summer heat, ideal for travel and outdoor activities. "
+];
+
+let index = 0;
+const slide = document.getElementById("slide");
+
+function showText() {
+  slide.style.opacity = 0;
+  setTimeout(() => {
+    slide.innerText = texts[index];
+    slide.style.opacity = 1;
+    index = (index + 1) % texts.length;
+  }, 700);
+}
+
+setInterval(showText, 3000); // auto slide every 3 seconds
+
+function goBack() {
+  window.history.back();
+}
+  
+  
+//snowman23
+const snowman = document.getElementById("magicSnowman");
+
+if (snowman) {
+  function createSparkle(x, y) {
+    const sparkle = document.createElement("div");
+    sparkle.className = "sparkle";
+    sparkle.innerHTML = "✨";
+    sparkle.style.left = x + "px";
+    sparkle.style.top = y + "px";
+    document.body.appendChild(sparkle);
+    setTimeout(() => sparkle.remove(), 1000);
+  }
+
+  function magicEffect(e) {
+    snowman.classList.add("magic-glow");
+    setTimeout(() => snowman.classList.remove("magic-glow"), 600);
+
+    const rect = snowman.getBoundingClientRect();
+    for (let i = 0; i < 12; i++) {
+      createSparkle(
+        rect.left + rect.width / 2 + Math.random() * 40 - 20,
+        rect.top + rect.height / 2
+      );
+    }
+  }
+
+  snowman.addEventListener("click", magicEffect);
+  snowman.addEventListener("touchstart", magicEffect);
+}
+</script>
+  <script>
+document.addEventListener("click", function(e) {
+  const glow = document.createElement("div");
+  glow.className = "winter-glow";
+  glow.style.left = e.pageX + "px";
+  glow.style.top = e.pageY + "px";
+  document.body.appendChild(glow);
+
+  setTimeout(() => glow.remove(), 800);
+});
+  </script>
+  <script>
+const snowman = document.getElementById("magicSnowman");
+
+let isDragging = false;
+let startX = 0, startY = 0;
+let snowX = 0, snowY = 0;
+
+/* INIT POSITION */
+const rect = snowman.getBoundingClientRect();
+snowX = rect.left;
+snowY = rect.top;
+
+snowman.style.left = snowX + "px";
+snowman.style.top = snowY + "px";
+snowman.style.right = "auto";
+snowman.style.bottom = "auto";
+
+/* START DRAG */
+function dragStart(e) {
+  e.preventDefault();
+  isDragging = true;
+  snowman.classList.add("dragging");
+
+  const touch = e.touches ? e.touches[0] : e;
+  startX = touch.clientX;
+  startY = touch.clientY;
+}
+
+/* MOVE */
+function dragMove(e) {
+  if (!isDragging) return;
+
+  const touch = e.touches ? e.touches[0] : e;
+  const dx = touch.clientX - startX;
+  const dy = touch.clientY - startY;
+
+  let newX = snowX + dx;
+  let newY = snowY + dy;
+
+  /* Keep inside screen */
+  newX = Math.max(0, Math.min(newX, window.innerWidth - snowman.offsetWidth));
+  newY = Math.max(0, Math.min(newY, window.innerHeight - snowman.offsetHeight));
+
+  snowman.style.left = newX + "px";
+  snowman.style.top = newY + "px";
+}
+
+/* END DRAG */
+function dragEnd(e) {
+  if (!isDragging) return;
+  isDragging = false;
+  snowman.classList.remove("dragging");
+
+  const rect = snowman.getBoundingClientRect();
+  snowX = rect.left;
+  snowY = rect.top;
+}
+
+/* EVENTS */
+snowman.addEventListener("mousedown", dragStart);
+snowman.addEventListener("touchstart", dragStart, { passive: false });
+
+document.addEventListener("mousemove", dragMove);
+document.addEventListener("touchmove", dragMove, { passive: false });
+
+document.addEventListener("mouseup", dragEnd);
+document.addEventListener("touchend", dragEnd);
+</script>
+  <script src="snowman-drag.js"></script>
+  <!-- SOS / HELPLINE BUTTON -->
+<a href="helpline2.html" class="sos-btn">
+ 🆘 Helpline
+</a>
+</body>
+</html>
+</body>
+  <br></br>
+<br></br>
+<br></br>
+<footer>
+  © 2026 | Team Laksha Cracker
+</footer>
+</html>

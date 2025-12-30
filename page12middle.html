@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>wintergidence/httyr98/lakshacracker/1</title>
+<link rel="stylesheet" href="1buttonforsfl.css">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 70px; 
+  color: white;
+}
+
+/* Back Button */
+.back-btn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: #00c6ff;
+  color: black;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background: white;
+  transform: scale(1.05);
+}
+
+.container {
+  width: 90%;
+  max-width: 420px;
+  padding: 25px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.12);
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.slide-box {
+  min-height: 120px;
+  font-size: 15px;
+  line-height: 1.6;
+  transition: opacity 0.7s ease-in-out;
+}
+
+/* Text below frame */
+.prewinter-text {
+  max-width: 600px;
+  margin-top: 18px;
+  padding: 0 15px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Back Button -->
+<button class="back-btn" onclick="goBack()">⬅ Back</button>
+
+<div class="container">
+  <h3>❄️ Pree Winter Season ❄️</h3>
+
+  <div id="slide" class="slide-box">
+    Timing: Late October/November to December, bridging autumn (Sharad) and winter (Shishir).
+  </div>
+  
+  <div class="button-wrapper">
+    <a href="sports1.html">
+      <button class="fun-btn sports">Sports</button>
+    </a>
+
+    <a href="festivles11.html">
+      <button class="fun-btn festivals">Festivals</button>
+    </a>
+
+    <a href="turistspot1.html">
+      <button class="fun-btn tourist">Tourist Spots</button>
+    </a>
+  </div>
+</div>
+
+<!-- ✅ PRE-WINTER KNOWLEDGE BELOW FRAME BOX -->
+<p class="prewinter-text">
+  Pre-winter is the season that comes between autumn and winter. During this period,
+  the weather becomes cooler and pleasant, mornings and nights turn chilly, and people
+  begin preparing for colder days. It is a comfortable time for festivals, outdoor
+  activities, travel, and maintaining good health before deep winter starts.
+</p>
+
+<!-- Helpline Floating Button -->
+<a href="helpline2.html" class="helpline-btn">🆘 Helpline</a>
+
+<script>
+const texts = [
+  "Weather: Pleasant days with cool breeze and chilly nights.",
+  "Temperature: Slowly drops but remains comfortable.",
+  "Nature: Falling leaves, clear skies, and morning dew.",
+  "Festivals: Diwali, Bhai Dooj, Chhath Puja bring joy.",
+  "Lifestyle: Ideal time for travel, sports, and morning walks.",
+  "Feeling: Refreshing and comfortable before deep winter."
+];
+
+let index = 0;
+const slide = document.getElementById("slide");
+
+function showText() {
+  slide.style.opacity = 0;
+  setTimeout(() => {
+    slide.innerText = texts[index];
+    slide.style.opacity = 1;
+    index = (index + 1) % texts.length;
+  }, 700);
+}
+
+setInterval(showText, 3000);
+
+function goBack() {
+  window.history.back();
+}
+</script>
+
+</body>
+<br></br>
+<br></br>
+<br></br>
+<footer>
+  © 2026 | Team Laksha Cracker
+</footer>
+</html>

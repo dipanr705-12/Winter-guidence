@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pre-Winter Tourist Spots in India</title>
+<link rel="stylesheet" href="onlystyle.css" >
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  color:white;
+  overflow-x:hidden;
+}
+
+/* Back button */
+.back-btn{
+  position:fixed;
+  top:15px;
+  left:15px;
+  padding:8px 16px;
+  border:none;
+  border-radius:20px;
+  background:#00c6ff;
+  color:black;
+  font-weight:bold;
+  cursor:pointer;
+  z-index:10;
+}
+
+/* Header */
+header{
+  text-align:center;
+  padding:80px 20px 30px;
+}
+
+header h1{
+  font-size:2.3rem;
+}
+
+header p{
+  opacity:0.9;
+}
+
+/* Grid */
+.places{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:20px;
+  padding:20px;
+  max-width:1000px;
+  margin:auto;
+}
+
+/* Card */
+.card{
+  background:rgba(255,255,255,0.15);
+  border-radius:20px;
+  padding:18px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px) scale(1.05);
+  background:rgba(255,255,255,0.25);
+}
+
+.icon{
+  font-size:45px;
+  margin-bottom:10px;
+}
+
+.card h3{
+  margin-bottom:6px;
+}
+
+.card p{
+  font-size:13px;
+  opacity:0.9;
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:20px;
+  opacity:0.8;
+}
+
+/* Snowfall */
+.snow{
+  position:absolute;
+  top:-20px;
+  color:white;
+  animation:fall linear infinite;
+}
+
+@keyframes fall{
+  to{ transform:translateY(110vh); }
+}
+</style>
+</head>
+
+<body>
+
+<button class="back-btn" onclick="history.back()">⬅ Back</button>
+
+<header>
+  <h1>❄️ Pre-Winter Tourist Spots in India ❄️</h1>
+  <p>Best places to visit before extreme winter starts</p>
+</header>
+<section class="places">
+ <a href="darjeeling-prewinter.html" class="place-btn">
+  <div class="icon">🏔️</div>
+  <div class="text">
+    <h3>Darjeeling</h3>
+    <p>Cool weather, tea gardens & mountain views</p>
+  </div>
+</a>
+  
+<a href="rajasthan-prewinter.html" class="place-btn">
+  <div class="icon">🏜️</div>
+  <div class="text">
+    <h3>Rajasthan</h3>
+    <p>Perfect time for desert safari & forts</p>
+  </div>
+</a>
+  
+<a href="varanashi-prewinter.html" class="place-btn">
+  <div class="icon">🛕</div>
+  <div class="text">
+    <h3>Varanasi</h3>
+    <p>Pleasant climate for spiritual tourism</p>
+  </div>
+</a>
+
+<a href="kerala-prewinter.html" class="place-btn">
+        <div class="icon">🌴</div>
+  <div class="text">
+    <h3>Kerala</h3>
+    <p>Post-monsoon greenery & backwaters</p>
+  </div>
+</a>
+
+ <a href="jaipur-prewinter1.html" class="place-btn">
+       <div class="icon">🏯</div>
+  <div class="text">
+    <h3>Jaipur</h3>
+    <p>Best season for sightseeing</p>
+  </div>
+</a>
+
+
+
+<footer>
+  © 2026 | Team Laksha Cracker
+</footer>
+
+<script>
+/* Snow effect */
+for(let i=0;i<50;i++){
+  const snow=document.createElement("div");
+  snow.className="snow";
+  snow.innerHTML="❄";
+  snow.style.left=Math.random()*100+"vw";
+  snow.style.fontSize=Math.random()*15+10+"px";
+  snow.style.opacity=Math.random();
+  snow.style.animationDuration=Math.random()*5+5+"s";
+  document.body.appendChild(snow);
+}
+</script>
+
+</body>
+</html>

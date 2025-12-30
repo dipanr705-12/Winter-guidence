@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jaipur – The Pink City</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:linear-gradient(135deg,#ff6a88,#ff99ac);
+  color:white;
+  overflow-x:hidden;
+}
+
+/* Back Button */
+.back-btn{
+  position:fixed;
+  top:15px;
+  left:15px;
+  padding:8px 16px;
+  border:none;
+  border-radius:20px;
+  background:white;
+  color:#7a1c2c;
+  font-weight:bold;
+  cursor:pointer;
+  z-index:10;
+}
+
+/* Header */
+header{
+  text-align:center;
+  padding:80px 20px 30px;
+}
+
+header h1{
+  font-size:2.5rem;
+}
+
+header p{
+  margin-top:8px;
+  opacity:0.9;
+}
+
+/* Main Container */
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:20px;
+}
+
+/* Card */
+.card{
+  background:rgba(255,255,255,0.18);
+  border-radius:20px;
+  padding:20px;
+  margin-bottom:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  background:rgba(255,255,255,0.25);
+}
+
+.card h2{
+  margin-bottom:10px;
+}
+
+.card p{
+  line-height:1.6;
+  font-size:15px;
+}
+
+/* Places Grid */
+.places{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:15px;
+  margin-top:15px;
+}
+
+.place{
+  background:rgba(255,255,255,0.25);
+  padding:15px;
+  border-radius:15px;
+  text-align:center;
+}
+
+.place span{
+  font-size:35px;
+  display:block;
+  margin-bottom:6px;
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:20px;
+  opacity:0.85;
+}
+
+/* Floating Fort Animation */
+.fort{
+  position:absolute;
+  top:-20px;
+  animation:fall linear infinite;
+}
+
+@keyframes fall{
+  to{ transform:translateY(110vh); }
+}
+</style>
+</head>
+
+<body>
+
+<button class="back-btn" onclick="history.back()">⬅ Back</button>
+
+<header>
+  <h1>🏰 Jaipur 🏰</h1>
+  <p>The Pink City of India</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>🌸 About Jaipur</h2>
+    <p>
+      Jaipur, the capital of Rajasthan, is known as the Pink City.
+      It is famous for its royal palaces, grand forts, colorful bazaars,
+      and rich cultural heritage.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>🌤️ Climate</h2>
+    <p>
+      Jaipur has a semi-arid climate. Winters are pleasant and ideal
+      for sightseeing, while summers can be hot. The best time to visit
+      Jaipur is from October to March.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>📍 Famous Places</h2>
+    <div class="places">
+      <div class="place">
+        <span>🏯</span>
+        Amer Fort
+      </div>
+      <div class="place">
+        <span>🏛️</span>
+        City Palace
+      </div>
+      <div class="place">
+        <span>🌬️</span>
+        Hawa Mahal
+      </div>
+      <div class="place">
+        <span>⏳</span>
+        Jantar Mantar
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>✨ Why Visit Jaipur?</h2>
+    <p>
+      ✔ Royal heritage & architecture<br>
+      ✔ Colorful markets & handicrafts<br>
+      ✔ Delicious Rajasthani cuisine<br>
+      ✔ Cultural festivals & traditions
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 | Team laksha cracker
+</footer>
+
+<script>
+/* Floating fort animation */
+for(let i=0;i<30;i++){
+  let fort=document.createElement("div");
+  fort.className="fort";
+  fort.innerHTML="🏰";
+  fort.style.left=Math.random()*100+"vw";
+  fort.style.fontSize=Math.random()*14+16+"px";
+  fort.style.opacity=Math.random();
+  fort.style.animationDuration=Math.random()*6+6+"s";
+  document.body.appendChild(fort);
+}
+</script>
+
+</body>
+</html>

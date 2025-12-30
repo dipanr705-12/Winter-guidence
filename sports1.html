@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pre-Winter Sports</title>
+<link rel="stylesheet" href="q32e.css" >
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:linear-gradient(135deg,#1d2671,#c33764);
+  color:white;
+  overflow-x:hidden;
+}
+
+/* Back Button */
+.back-btn{
+  position:fixed;
+  top:15px;
+  left:15px;
+  padding:8px 16px;
+  border-radius:20px;
+  border:none;
+  cursor:pointer;
+  background:#00c6ff;
+  color:black;
+  font-weight:bold;
+  z-index:10;
+}
+
+/* Header */
+header{
+  text-align:center;
+  padding:70px 20px 30px;
+}
+
+header h1{
+  font-size:2.2rem;
+}
+
+header p{
+  opacity:0.9;
+}
+
+/* Sports Grid */
+.sports-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:20px;
+  padding:20px;
+  max-width:900px;
+  margin:auto;
+}
+
+/* Sport Card */
+.card{
+  background:rgba(255,255,255,0.15);
+  border-radius:20px;
+  padding:20px 10px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px) scale(1.05);
+  background:rgba(255,255,255,0.25);
+}
+
+.icon{
+  font-size:45px;
+  margin-bottom:10px;
+}
+
+.card h3{
+  margin-bottom:6px;
+}
+
+.card p{
+  font-size:13px;
+  opacity:0.9;
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:20px;
+  opacity:0.8;
+}
+
+/* Snow */
+.snow{
+  position:absolute;
+  top:-20px;
+  animation:fall linear infinite;
+  color:white;
+}
+
+@keyframes fall{
+  to{transform:translateY(110vh);}
+}
+</style>
+</head>
+
+<body>
+
+<button class="back-btn" onclick="history.back()">⬅ Back</button>
+
+<header>
+  <h1>❄️ Pre-Winter Sports ❄️</h1>
+  <p>Best sports to play before deep winter begins</p>
+</header>
+
+<section class="sports-grid">
+<a href="football.html" class="football-link">
+  <div class="card">
+    <div class="icon">⚽</div>
+    <h3 style="color:#fff;">Football</h3>
+  <p style="color:#fff;">Cool weather improves stamina</p>
+  </div>
+</a>
+
+ <a href="cricket1.html" class="football-link">
+  <div class="card">
+    <div class="icon">🏏</div>
+    <h3 style="color:#fff;">cricket</h3>
+  <p style="color:#fff;">Cricket: teamwork, skill, strategy, passion.</p>
+  </div>
+</a>
+  <a href="running1.html" class="football-link">
+  <div class="card">
+    <div class="icon">🏃</div>
+    <h3 style="color:#fff;">Running</h3>
+  <p style="color:#fff;">Best season for endurance</p>
+  </div>
+</a>
+   <a href="cycling1.html" class="football-link">
+  <div class="card">
+    <div class="icon">🚴</div>
+    <h3 style="color:#fff;">Cycling</h3>
+  <p style="color:#fff;">Fresh air & less heat</p>
+  </div>
+</a>
+
+  <a href="badminton1.html" class="football-link">
+  <div class="card">
+    <div class="icon">🏸</div>
+    <h3 style="color:#fff;">Badminton</h3>
+  <p style="color:#fff;">Indoor & outdoor friendly</p>
+  </div>
+</a>
+
+   <a href="cricket1.html" class="football-link">
+  <div class="card">
+    <div class="icon">🧘</div>
+    <h3 style="color:#fff;">Yoga</h3>
+  <p style="color:#fff;">Boost immunity naturally</p>
+  </div>
+</a>
+
+</section>
+
+<footer>
+  © 2026 | Team Laksha Cracker
+</footer>
+
+<script>
+/* Snowfall */
+for(let i=0;i<60;i++){
+  let snow=document.createElement("div");
+  snow.className="snow";
+  snow.innerHTML="❄";
+  snow.style.left=Math.random()*100+"vw";
+  snow.style.fontSize=Math.random()*15+10+"px";
+  snow.style.opacity=Math.random();
+  snow.style.animationDuration=Math.random()*5+5+"s";
+  document.body.appendChild(snow);
+}
+</script>
+
+</body>
+</html> 

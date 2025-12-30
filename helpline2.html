@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emergency Helpline – India</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:linear-gradient(135deg,#141e30,#243b55);
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  padding:70px 10px;
+}
+
+/* Back Button */
+.back-btn{
+  position:fixed;
+  top:15px;
+  left:15px;
+  padding:8px 14px;
+  border-radius:20px;
+  background:#00c6ff;
+  color:black;
+  border:none;
+  font-size:13px;
+  cursor:pointer;
+}
+
+/* Container */
+.container{
+  width:100%;
+  max-width:420px;
+  background:rgba(255,255,255,0.12);
+  padding:25px;
+  border-radius:18px;
+  text-align:center;
+  box-shadow:0 0 25px rgba(0,0,0,0.4);
+}
+
+h1{
+  margin-bottom:10px;
+}
+
+p{
+  font-size:14px;
+  opacity:0.9;
+  margin-bottom:20px;
+}
+
+/* Helpline Cards */
+.helpline{
+  background:rgba(255,255,255,0.2);
+  padding:15px;
+  border-radius:15px;
+  margin-bottom:12px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.helpline span{
+  font-size:22px;
+}
+
+.helpline a{
+  text-decoration:none;
+  color:black;
+  background:#00e676;
+  padding:6px 14px;
+  border-radius:20px;
+  font-weight:bold;
+  font-size:14px;
+}
+
+/* Footer */
+footer{
+  margin-top:15px;
+  font-size:12px;
+  opacity:0.8;
+}
+</style>
+</head>
+
+<body>
+
+<button class="back-btn" onclick="history.back()">⬅ Back</button>
+
+<div class="container">
+  <h1>🚨 Emergency Helpline</h1>
+  <p>Important helpline numbers for any emergency in India</p>
+
+  <div class="helpline">
+    <span>🚓 Police</span>
+   <a href="tel:+100" class="call-btn">
+    100
+  </a>
+  </div>
+
+  <div class="helpline">
+    <span>🚑 Ambulance</span>
+    <a href="tel:+108" class="call-btn">
+    108
+  </a>
+  </div>
+
+  <div class="helpline">
+    <span>🔥 Fire</span>
+    <a href="tel:+101" class="call-btn">
+    101
+  </a>
+  </div>
+
+  <div class="helpline">
+    <span>🆘 Emergency (All)</span>
+   <a href="tel:+112" class="call-btn">
+    111
+  </a>
+  </div>
+
+  <div class="helpline">
+    <span>👩 Women Helpline</span>
+    <a href="tel:+181" class="call-btn">
+    181
+  </a>
+  </div>
+
+  <div class="helpline">
+    <span>👶 Child Helpline</span>
+   <a href="tel:+1098" class="call-btn">
+    1098
+  </a>
+  </div>
+
+  <div class="helpline">
+    <span>🧠 Mental Health</span>
+    <a href="tel:+9152987821" class="call-btn">
+   9152987821
+  </a>
+  </div>
+
+  <div class="helpline">
+    <span>🚆 Railway Help</span>
+   <a href="tel:+139" class="call-btn">
+    139
+  </a>
+  </div>
+
+  <footer>
+    © 2026 | Team laksha cracker
+  </footer>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auli in Winter</title>
+<link rel="stylesheet" href="common.css">
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  color:white;
+  overflow-x:hidden;
+}
+
+/* Back button */
+.back-btn{
+  position:fixed;
+  top:15px;
+  left:15px;
+  padding:8px 16px;
+  border:none;
+  border-radius:20px;
+  background:#ffffff;
+  color:#0f2027;
+  font-weight:bold;
+  cursor:pointer;
+  z-index:20;
+}
+
+/* Header */
+header{
+  text-align:center;
+  padding:80px 20px 30px;
+  position:relative;
+  z-index:5;
+}
+
+header h1{
+  font-size:2.5rem;
+}
+
+header p{
+  margin-top:8px;
+  opacity:0.95;
+}
+
+/* Container */
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:20px;
+  position:relative;
+  z-index:5;
+}
+
+/* Card */
+.card{
+  background:rgba(255,255,255,0.18);
+  border-radius:20px;
+  padding:20px;
+  margin-bottom:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  background:rgba(255,255,255,0.25);
+}
+
+.card h2{
+  margin-bottom:10px;
+}
+
+.card p{
+  font-size:15px;
+  line-height:1.6;
+}
+
+/* Highlights */
+.highlights{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:15px;
+  margin-top:15px;
+}
+
+.highlight{
+  background:rgba(255,255,255,0.25);
+  padding:15px;
+  border-radius:15px;
+  text-align:center;
+}
+
+.highlight span{
+  font-size:35px;
+  display:block;
+  margin-bottom:6px;
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:20px;
+  opacity:0.9;
+  position:relative;
+  z-index:5;
+}
+
+/* ❄️ Snow */
+.snow{
+  position:absolute;
+  top:-20px;
+  animation:snowfall linear infinite;
+  pointer-events:none;
+}
+
+@keyframes snowfall{
+  to{
+    transform:translateY(110vh) translateX(50px);
+  }
+}
+
+/* 🌩️ Lightning */
+.flash{
+  position:fixed;
+  inset:0;
+  background:white;
+  opacity:0;
+  z-index:15;
+  pointer-events:none;
+}
+
+/* 🌪️ Wind */
+.wind{
+  position:fixed;
+  inset:0;
+  background:linear-gradient(120deg, transparent, rgba(255,255,255,0.08), transparent);
+  animation:windMove 4s linear infinite;
+  z-index:2;
+  pointer-events:none;
+}
+
+@keyframes windMove{
+  from{transform:translateX(-100%);}
+  to{transform:translateX(100%);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="flash" id="flash"></div>
+<div class="wind"></div>
+
+<button class="back-btn" onclick="history.back()">⬅ Back</button>
+
+<header>
+  <h1>❄️ Auli in Winter ❄️</h1>
+  <p>India’s Skiing Destination & Himalayan Snow Fields</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>🏔️ About Auli</h2>
+    <p>
+      Auli is a beautiful hill station in Uttarakhand, famous for its snow-covered
+      slopes and panoramic views of the Himalayan peaks like Nanda Devi.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>❄️ Winter Weather</h2>
+    <p>
+      Winter in Auli (December–February) brings heavy snowfall, cold winds,
+      and breathtaking white landscapes, making it a paradise for ski lovers.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>📍 Winter Attractions</h2>
+    <div class="highlights">
+      <div class="highlight"><span>⛷️</span>Skiing</div>
+      <div class="highlight"><span>🚡</span>Ropeway</div>
+      <div class="highlight"><span>❄️</span>Snowfall</div>
+      <div class="highlight"><span>🏔️</span>Himalayas</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🎒 Why Visit Auli?</h2>
+    <p>
+      ✔ Best skiing slopes in India<br>
+      ✔ Stunning Himalayan views<br>
+      ✔ Peaceful & clean environment<br>
+      ✔ Perfect for winter adventure
+    </p>
+  </div>
+
+</div>
+<button class="back-btn" onclick="history.back()">⬅ Back</button>
+<footer>
+  © 2026 | Team Laksha Cracker
+</footer>
+
+<script>
+/* ❄️ Snowstorm */
+for(let i=0;i<55;i++){
+  let snow=document.createElement("div");
+  snow.className="snow";
+  snow.innerHTML="❄️";
+  snow.style.left=Math.random()*100+"vw";
+  snow.style.fontSize=Math.random()*14+10+"px";
+  snow.style.opacity=Math.random();
+  snow.style.animationDuration=Math.random()*5+4+"s";
+  document.body.appendChild(snow);
+}
+
+/* 🌩️ Lightning effect */
+function lightning(){
+  const flash=document.getElementById("flash");
+  flash.style.opacity=0.85;
+  setTimeout(()=>flash.style.opacity=0,120);
+}
+
+setInterval(()=>{
+  if(Math.random()>0.65){
+    lightning();
+  }
+},3500);
+</script>
+
+</body>
+</html>

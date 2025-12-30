@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Winter Tourist Places in India</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="common.css">
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Segoe UI", sans-serif;
+}
+
+body{
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  color:white;
+  min-height:100vh;
+}
+
+/* HEADER */
+header{
+  padding:35px 20px;
+  text-align:center;
+  background:rgba(0,0,0,0.45);
+}
+
+header h1{
+  font-size:2.5rem;
+}
+
+header p{
+  opacity:0.9;
+  margin-top:8px;
+}
+
+/* CONTAINER */
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:30px 20px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap:25px;
+}
+
+/* BUTTON CARD */
+.place-btn{
+  border:none;
+  cursor:pointer;
+  text-align:left;
+  padding:25px;
+  border-radius:18px;
+  color:white;
+  background: linear-gradient(160deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
+  box-shadow:0 10px 25px rgba(0,0,0,0.35);
+  transition:0.35s ease;
+}
+
+.place-btn:hover{
+  transform: translateY(-8px) scale(1.03);
+  background: linear-gradient(160deg, rgba(255,255,255,0.25), rgba(255,255,255,0.1));
+}
+
+.place-btn:active{
+  transform: scale(0.97);
+}
+
+/* ICON */
+.icon{
+  font-size:48px;
+  margin-bottom:15px;
+}
+
+/* TITLE */
+.place-btn h2{
+  color:#ffdd57;
+  margin-bottom:10px;
+}
+
+/* TEXT */
+.place-btn p{
+  font-size:0.95rem;
+  line-height:1.6;
+  opacity:0.95;
+}
+
+/* TAG */
+.tag{
+  display:inline-block;
+  margin-top:15px;
+  padding:6px 14px;
+  border-radius:20px;
+  background:#ffdd57;
+  color:#000;
+  font-size:0.8rem;
+  font-weight:bold;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  background:rgba(0,0,0,0.45);
+  font-size:0.9rem;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  header h1{
+    font-size:2rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>❄️ Best Winter Tourist Places in India</h1>
+  <p>Tap on any place to explore</p>
+</header>
+
+<div class="container">
+  <div class="grid">
+<a href="manali1.html" class="place-btn">
+    <button class="place-btn">
+      <div class="icon">🏔️</div>
+      <h2>Manali</h2>
+      <p>Snowfall, skiing, Solang Valley and honeymoon destination.</p>
+      <span class="tag">Snow</span>
+    </button>
+  </a>
+    <a href="gulmarg2e.html" class="place-btn">
+    <button class="place-btn")">
+      <div class="icon">❄️</div>
+      <h2>Gulmarg</h2>
+      <p>Heavy snowfall, gondola ride and skiing paradise.</p>
+      <span class="tag">Skiing</span>
+    </button>
+      </a>
+<a href="auli1.html" class="place-btn">
+    <button class="place-btn" )">
+      <div class="icon">⛷️</div>
+      <h2>Auli</h2>
+      <p>Himalayan views, clean snow slopes and adventure sports.</p>
+      <span class="tag">Adventure</span>
+    </button>
+</a>
+    <a href="jaisalmir.html" class="place-btn">
+    <button class="place-btn" >
+      <div class="icon">🏜️</div>
+      <h2>Jaisalmer</h2>
+      <p>Desert safari, camel rides and winter festivals.</p>
+      <span class="tag">Desert</span>
+    </button>
+    </a>
+<a href="rishikesh.html" class="place-btn">
+    <button class="place-btn" >
+      <div class="icon">🧘</div>
+      <h2>Rishikesh</h2>
+      <p>Yoga, Ganga Aarti and peaceful winter climate.</p>
+      <span class="tag">Spiritual</span>
+    </button>
+</a>
+    
+   <a href="leladakh.html" class="place-btn">
+    <button class="place-btn" >
+      <div class="icon">🏔️</div>
+      <h2>Leh–Ladakh</h2>
+      <p>Frozen lakes, monasteries and extreme winter adventure.</p>
+      <span class="tag">Extreme</span>
+    </button>
+   </a>
+
+  </div>
+</div>
+<button class="back-btn" onclick="history.back()">⬅ Back</button>
+<footer>
+  © 2026 | Team Laksha Cracker
+</footer>
+
+</body>
+</html>

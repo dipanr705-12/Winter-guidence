@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kerala in Pre-Winter</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:linear-gradient(135deg,#11998e,#38ef7d);
+  color:white;
+  overflow-x:hidden;
+}
+
+/* Back button */
+.back-btn{
+  position:fixed;
+  top:15px;
+  left:15px;
+  padding:8px 16px;
+  border:none;
+  border-radius:20px;
+  background:#ffffff;
+  color:#0b4f3c;
+  font-weight:bold;
+  cursor:pointer;
+  z-index:10;
+}
+
+/* Header */
+header{
+  text-align:center;
+  padding:80px 20px 30px;
+}
+
+header h1{
+  font-size:2.5rem;
+}
+
+header p{
+  margin-top:8px;
+  opacity:0.95;
+}
+
+/* Main container */
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:20px;
+}
+
+/* Card section */
+.card{
+  background:rgba(255,255,255,0.18);
+  border-radius:20px;
+  padding:20px;
+  margin-bottom:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  background:rgba(255,255,255,0.25);
+}
+
+.card h2{
+  margin-bottom:10px;
+}
+
+.card p{
+  font-size:15px;
+  line-height:1.6;
+}
+
+/* Places grid */
+.highlights{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:15px;
+  margin-top:15px;
+}
+
+.highlight{
+  background:rgba(255,255,255,0.25);
+  padding:15px;
+  border-radius:15px;
+  text-align:center;
+}
+
+.highlight span{
+  font-size:35px;
+  display:block;
+  margin-bottom:6px;
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:20px;
+  opacity:0.9;
+}
+
+/* Falling leaf animation */
+.leaf{
+  position:absolute;
+  top:-20px;
+  animation:fall linear infinite;
+}
+
+@keyframes fall{
+  to{ transform:translateY(110vh) rotate(360deg); }
+}
+</style>
+</head>
+
+<body>
+
+<button class="back-btn" onclick="history.back()">⬅ Back</button>
+
+<header>
+  <h1>🌴 Kerala in Pre-Winter 🌴</h1>
+  <p>God’s Own Country of backwaters & greenery</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>🌿 About Kerala</h2>
+    <p>
+      Kerala is a beautiful state located on the southwestern coast of India.
+      Known as “God’s Own Country”, it is famous for its lush green landscapes,
+      backwaters, beaches, wildlife, and rich cultural traditions.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>🍃 Pre-Winter Weather</h2>
+    <p>
+      During pre-winter (October–November), Kerala enjoys pleasant weather after
+      the monsoon. The greenery is at its best, humidity reduces, and the climate
+      becomes perfect for travel and sightseeing.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>📍 Places to Visit</h2>
+    <div class="highlights">
+      <div class="highlight">
+        <span>🚤</span>
+        Alleppey Backwaters
+      </div>
+      <div class="highlight">
+        <span>🏞️</span>
+        Munnar
+      </div>
+      <div class="highlight">
+        <span>🐘</span>
+        Thekkady
+      </div>
+      <div class="highlight">
+        <span>🏖️</span>
+        Varkala Beach
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🎒 Why Visit in Pre-Winter?</h2>
+    <p>
+      ✔ Fresh green landscapes after monsoon<br>
+      ✔ Comfortable weather for travel<br>
+      ✔ Best time for houseboat stays<br>
+      ✔ Perfect season for nature & wildlife lovers
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 | Team Laksha Cracker
+</footer>
+
+<script>
+/* Falling leaf effect */
+for(let i=0;i<35;i++){
+  let leaf=document.createElement("div");
+  leaf.className="leaf";
+  leaf.innerHTML="🍃";
+  leaf.style.left=Math.random()*100+"vw";
+  leaf.style.fontSize=Math.random()*14+16+"px";
+  leaf.style.opacity=Math.random();
+  leaf.style.animationDuration=Math.random()*6+6+"s";
+  document.body.appendChild(leaf);
+}
+</script>
+
+</body>
+</html>

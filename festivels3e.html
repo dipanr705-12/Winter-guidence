@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Winter Festivals of India</title>
+<link rel="stylesheet" href="common.css">
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:radial-gradient(circle at top,#1b3a4b,#0b132b);
+  color:white;
+  overflow-x:hidden;
+}
+
+/* HEADER */
+header{
+  text-align:center;
+  padding:80px 20px 40px;
+  animation:fadeDown 1.2s ease;
+}
+
+header h1{
+  font-size:2.8rem;
+  letter-spacing:1px;
+}
+
+header p{
+  margin-top:12px;
+  opacity:0.9;
+}
+
+/* CONTAINER */
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+/* FESTIVAL CARD */
+.card{
+  position:relative;
+  background:rgba(255,255,255,0.12);
+  backdrop-filter:blur(12px);
+  border-radius:22px;
+  padding:25px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.45);
+  transform-style:preserve-3d;
+  transition:transform 0.5s ease, box-shadow 0.5s;
+  opacity:0;
+  transform:translateY(40px);
+}
+
+.card.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.card:hover{
+  transform:rotateY(10deg) rotateX(6deg) scale(1.04);
+  box-shadow:0 30px 60px rgba(0,0,0,0.7);
+}
+
+.card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:22px;
+  background:linear-gradient(120deg,transparent,#ffffff60,transparent);
+  opacity:0;
+  transition:0.5s;
+}
+
+.card:hover::before{
+  opacity:1;
+}
+
+.card h2{
+  margin-bottom:10px;
+}
+
+.card p{
+  font-size:14.5px;
+  line-height:1.7;
+  opacity:0.95;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:25px;
+  font-size:14px;
+  opacity:0.8;
+}
+
+/* SNOW */
+.snow{
+  position:fixed;
+  top:-20px;
+  pointer-events:none;
+  animation:snowfall linear infinite;
+}
+
+@keyframes snowfall{
+  to{
+    transform:translateY(110vh);
+  }
+}
+
+/* HEADER ANIMATION */
+@keyframes fadeDown{
+  from{opacity:0;transform:translateY(-30px);}
+  to{opacity:1;transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>❄️ Winter Festivals of India ❄️</h1>
+  <p>Culture, Celebration & Cold Season Joy</p>
+</header>
+
+<div class="container">
+  <div class="grid">
+
+    <div class="card">
+      <h2>🪁 Makar Sankranti</h2>
+      <p>
+        Celebrated in January, it marks the sun’s transition into Capricorn.
+        Kite flying and traditional sweets define this festival.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>🔥 Lohri</h2>
+      <p>
+        A Punjabi festival celebrated with bonfires, folk songs,
+        and dance to mark the end of peak winter.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>🌾 Pongal</h2>
+      <p>
+        A harvest festival of Tamil Nadu celebrating nature,
+        farmers, and prosperity during winter.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>🕯️ Christmas</h2>
+      <p>
+        Celebrated on 25th December with lights, decorations,
+        gifts, and winter joy across India.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>🎉 New Year</h2>
+      <p>
+        Welcomed with celebrations, fireworks, and new hopes
+        during the winter vacation season.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>🪔 Magh Bihu</h2>
+      <p>
+        Assam’s winter harvest festival celebrated with feasts,
+        community gatherings, and traditional rituals.
+      </p>
+    </div>
+
+  </div>
+</div>
+<button class="back-btn" onclick="history.back()">⬅ Back</button>
+<br></br>
+
+<footer>
+  © 2026 | Team Laksha Cracker
+</footer>
+
+<script>
+/* Snow */
+for(let i=0;i<45;i++){
+  let snow=document.createElement("div");
+  snow.className="snow";
+  snow.innerHTML="❄";
+  snow.style.left=Math.random()*100+"vw";
+  snow.style.fontSize=Math.random()*16+10+"px";
+  snow.style.opacity=Math.random();
+  snow.style.animationDuration=Math.random()*6+6+"s";
+  document.body.appendChild(snow);
+}
+
+/* Scroll Reveal */
+const cards=document.querySelectorAll(".card");
+
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+},{threshold:0.2});
+
+cards.forEach(card=>observer.observe(card));
+</script>
+
+</body>
+</html>

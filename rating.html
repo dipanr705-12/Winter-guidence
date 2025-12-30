@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visitor Rating</title>
+<link rel="stylesheet" href="rating.css">
+</head>
+<body>
+
+<div class="rating-box">
+  <h2>Rate Our Website</h2>
+
+  <input type="text" id="name" placeholder="Enter your name">
+
+  <div class="stars">
+    <span class="star" data-value="1">★</span>
+    <span class="star" data-value="2">★</span>
+    <span class="star" data-value="3">★</span>
+    <span class="star" data-value="4">★</span>
+    <span class="star" data-value="5">★</span>
+  </div>
+
+  <button onclick="saveRating()">Save Rating</button>
+
+  <p id="msg"></p>
+</div>
+
+<div class="review-box">
+  <h3>Visitor Reviews</h3>
+  <ul id="reviewList"></ul>
+</div>
+
+<script src="rating.js"></script>
+</body>
+</html>

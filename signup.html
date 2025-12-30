@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Account</title>
+<style>
+body{
+  font-family: Arial;
+  background: linear-gradient(135deg,#74ebd5,#9face6);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+.box{
+  background:#fff;
+  padding:25px;
+  border-radius:12px;
+  width:300px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+input,button{
+  width:100%;
+  padding:10px;
+  margin:8px 0;
+}
+button{
+  background:#4CAF50;
+  color:#fff;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+}
+a{display:block;text-align:center;margin-top:10px;}
+</style>
+</head>
+
+<body>
+<div class="box">
+  <h2>Create Account</h2>
+  <input type="text" id="name" placeholder="Full Name" required>
+  <input type="email" id="email" placeholder="Email" required>
+  <input type="password" id="password" placeholder="Password" required>
+  <button onclick="signup()">Create Account</button>
+  <a href="login.html">Already have an account? Login</a>
+</div>
+
+<script src="auth.js"></script>
+</body>
+</html>

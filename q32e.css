@@ -1,0 +1,27 @@
+/* Football link button */
+.football-link{
+  text-decoration:none;
+}
+
+.football-link .card{
+  cursor:pointer;
+}
+/* Back Button - Top Left */
+.back-btn{
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  padding: 8px 16px;
+  background: #00ffcc;
+  color: #001;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.back-btn:hover{
+  background: #00ccaa;
+}

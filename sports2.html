@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sports to Play in Winter</title>
+<link rel="stylesheet" href="common.css">
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:linear-gradient(135deg,#1e3c72,#2a5298);
+  color:white;
+}
+
+/* Header */
+header{
+  text-align:center;
+  padding:70px 20px 30px;
+}
+
+header h1{
+  font-size:2.5rem;
+}
+
+header p{
+  margin-top:8px;
+  opacity:0.9;
+}
+
+/* Container */
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:20px;
+}
+
+/* Card */
+.card{
+  background:rgba(255,255,255,0.15);
+  border-radius:18px;
+  padding:20px;
+  margin-bottom:20px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+.card h2{
+  margin-bottom:10px;
+}
+
+.card p{
+  font-size:15px;
+  line-height:1.6;
+}
+
+/* Sports Grid */
+.sports{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:15px;
+  margin-top:15px;
+}
+
+.sport{
+  background:rgba(255,255,255,0.25);
+  padding:15px;
+  border-radius:15px;
+  text-align:center;
+}
+
+.sport span{
+  font-size:34px;
+  display:block;
+  margin-bottom:6px;
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:20px;
+  font-size:14px;
+  opacity:0.9;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>❄️ Sports to Play in Winter ❄️</h1>
+  <p>Stay Active, Warm & Healthy</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>🏃 Why Play Sports in Winter?</h2>
+    <p>
+      Playing sports in winter helps keep the body warm, improves immunity,
+      increases energy levels, and maintains physical fitness during cold weather.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>⛷️ Popular Winter Sports</h2>
+    <div class="sports">
+      <div class="sport">
+        <span>⛷️</span>
+        Skiing
+      </div>
+      <div class="sport">
+        <span>🏂</span>
+        Snowboarding
+      </div>
+      <div class="sport">
+        <span>⛸️</span>
+        Ice Skating
+      </div>
+      <div class="sport">
+        <span>🥌</span>
+        Ice Hockey
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🏏 Indoor & Outdoor Sports</h2>
+    <div class="sports">
+      <div class="sport">
+        <span>🏏</span>
+        Cricket
+      </div>
+      <div class="sport">
+        <span>⚽</span>
+        Football
+      </div>
+      <div class="sport">
+        <span>🏸</span>
+        Badminton
+      </div>
+      <div class="sport">
+        <span>🏓</span>
+        Table Tennis
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🎒 Benefits of Winter Sports</h2>
+    <p>
+      ✔ Keeps body warm<br>
+      ✔ Improves stamina & strength<br>
+      ✔ Boosts immunity<br>
+      ✔ Reduces stress & laziness<br>
+      ✔ Improves mental health
+    </p>
+  </div>
+
+</div>
+<button class="back-btn" onclick="history.back()">⬅ Back</button>
+<br></br>
+
+<footer>
+  © 2026 | Team Laksha Cracker
+</footer>
+
+</body>
+</html>
