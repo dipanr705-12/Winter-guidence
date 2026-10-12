@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>West Bengal Durga Puja Pandals - Complete Guide</title>
+<link rel="stylesheet" href="common.css">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  --festive-gold: #ffd700;
+  --festive-amber: #ff9800;
+  --festive-crimson: #c62828;
+  --card-bg: rgba(25, 23, 36, 0.75);
+  --glass-border: rgba(255, 215, 0, 0.25);
+  --text-main: #f9f9fb;
+  --text-muted: #d0d2db;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at 10% 20%, #1a0826 0%, #0d0f1e 40%, #080811 100%);
+  color: var(--text-main);
+  overflow-x: hidden;
+  padding-bottom: 60px;
+}
+
+/* Floating background festival elements */
+.bg-glow {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: 0;
+}
+.glow-1 {
+  top: 10%;
+  left: -100px;
+  width: 350px;
+  height: 350px;
+  background: rgba(230, 81, 0, 0.2);
+}
+.glow-2 {
+  bottom: 20%;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: rgba(183, 28, 28, 0.25);
+}
+
+/* Header */
+header {
+  position: relative;
+  text-align: center;
+  padding: 80px 20px 30px;
+  z-index: 1;
+}
+
+.festival-badge {
+  display: inline-block;
+  background: linear-gradient(90deg, #d32f2f, #ff9800);
+  color: #fff;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4);
+}
+
+header h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  background: linear-gradient(45deg, #ffe082, #ffd700, #ff7043);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 35px rgba(255, 215, 0, 0.35);
+}
+
+header p {
+  color: var(--text-muted);
+  font-size: 16px;
+  max-width: 680px;
+  margin: 12px auto 0;
+  line-height: 1.5;
+}
+
+/* Main Container */
+.container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  z-index: 1;
+}
+
+/* Search & Filter Bar */
+.control-panel {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 22px;
+  margin-bottom: 35px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.search-wrap {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #ffb74d;
+}
+
+.search-input {
+  width: 100%;
+  padding: 14px 16px 14px 48px;
+  background: rgba(10, 10, 20, 0.7);
+  border: 1.5px solid rgba(255, 215, 0, 0.3);
+  border-radius: 14px;
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #ffd700;
+  box-shadow: 0 0 16px rgba(255, 215, 0, 0.35);
+}
+
+/* Category Filter Chips */
+.filter-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.filter-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #e0e0e0;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-size: 13.5px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-weight: 500;
+}
+
+.filter-btn:hover {
+  background: rgba(255, 215, 0, 0.15);
+  border-color: #ffd700;
+  color: #ffd700;
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, #ff9800, #d32f2f);
+  border-color: transparent;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(255, 87, 34, 0.45);
+}
+
+/* Count bar */
+.result-stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13.5px;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  padding: 0 6px;
+}
+
+/* Pandals Grid */
+.pandal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+/* Pandal Card */
+.pandal-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.pandal-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ff9800, #ffd700, #d32f2f);
+  opacity: 0.8;
+}
+
+.pandal-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 215, 0, 0.6);
+  box-shadow: 0 18px 40px rgba(255, 152, 0, 0.25);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.zone-badge {
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 8px;
+  letter-spacing: 0.5px;
+}
+
+.zone-north { background: rgba(0, 200, 83, 0.2); color: #69f0ae; border: 1px solid rgba(0, 200, 83, 0.4); }
+.zone-south { background: rgba(33, 150, 243, 0.2); color: #82b1ff; border: 1px solid rgba(33, 150, 243, 0.4); }
+.zone-vip { background: rgba(156, 39, 176, 0.2); color: #ea80fc; border: 1px solid rgba(156, 39, 176, 0.4); }
+.zone-dist { background: rgba(255, 152, 0, 0.2); color: #ffd180; border: 1px solid rgba(255, 152, 0, 0.4); }
+
+.tag-label {
+  font-size: 11px;
+  color: #ffd54f;
+  background: rgba(255, 213, 79, 0.12);
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.pandal-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.pandal-location {
+  font-size: 13px;
+  color: #b0bec5;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pandal-desc {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 12px;
+  border-radius: 10px;
+  border-left: 3px solid #ff9800;
+}
+
+.meta-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin-bottom: 20px;
+  font-size: 12.5px;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #eceff1;
+}
+
+.meta-item strong {
+  color: #ffd54f;
+  min-width: 90px;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-map {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #e65100, #bf360c);
+  color: white;
+  text-decoration: none;
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 10px 14px;
+  border-radius: 10px;
+  transition: all 0.2s;
+}
+
+.btn-map:hover {
+  background: linear-gradient(135deg, #f57c00, #d84315);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(230, 81, 0, 0.4);
+}
+
+/* Route Guides Section */
+.routes-section {
+  margin-top: 50px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 30px 24px;
+}
+
+.section-heading {
+  font-size: 1.8rem;
+  color: #ffd700;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.routes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 20px;
+}
+
+.route-card {
+  background: rgba(15, 15, 25, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.route-card h3 {
+  font-size: 1.15rem;
+  color: #ff9800;
+  margin-bottom: 10px;
+}
+
+.route-card p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #d1d5db;
+}
+
+.route-steps {
+  list-style: none;
+  margin-top: 10px;
+  font-size: 12.5px;
+}
+
+.route-steps li {
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #eee;
+}
+
+/* Quick Tips Section */
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.tip-card {
+  background: rgba(255, 255, 255, 0.04);
+  border-left: 4px solid #ff9800;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.tip-card h4 {
+  font-size: 14px;
+  color: #ffd54f;
+  margin-bottom: 6px;
+}
+
+.tip-card p {
+  font-size: 12.5px;
+  color: #cfd8dc;
+  line-height: 1.5;
+}
+
+/* Empty state */
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 50px 20px;
+  font-size: 18px;
+  color: #90a4ae;
+}
+
+/* Confetti */
+.confetti {
+  position: fixed;
+  top: -20px;
+  pointer-events: none;
+  animation: fall linear infinite;
+  z-index: 999;
+}
+
+@keyframes fall {
+  to { transform: translateY(110vh) rotate(360deg); }
+}
+
+/* Back button override for page consistency */
+.back-btn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  background: #ff9800;
+  color: #000;
+  font-weight: 700;
+  font-size: 13.5px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+.back-btn:hover {
+  background: #ffd700;
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  header { padding: 70px 15px 25px; }
+  .pandal-grid { grid-template-columns: 1fr; }
+  .control-panel { padding: 15px; }
+  .filter-btn { font-size: 12px; padding: 6px 12px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Back Button -->
+<a href="festivles11.html" class="back-btn">⬅ Back to Festivals</a>
+
+<!-- Glowing ambiance spheres -->
+<div class="bg-glow glow-1"></div>
+<div class="bg-glow glow-2"></div>
+
+<header>
+  <span class="festival-badge">🔱 UNESCO Intangible Cultural Heritage</span>
+  <h1>Durga Puja Pandals of West Bengal</h1>
+  <p>The ultimate comprehensive guide to world-famous pandals, traditional bonedi bari pujas, metro routes, and pandal-hopping trails across Kolkata and the districts.</p>
+</header>
+
+<div class="container">
+
+  <!-- Search & Filter Controls -->
+  <div class="control-panel">
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="pandalSearch" class="search-input" placeholder="Search by pandal name, metro station, theme, or locality (e.g. Sree Bhumi, Kalighat, Kalyani)...">
+    </div>
+
+    <div class="filter-tags">
+      <button class="filter-btn active" data-filter="all">🌟 All Pandals</button>
+      <button class="filter-btn" data-filter="north">🏛️ North & Central Kolkata</button>
+      <button class="filter-btn" data-filter="south">🎨 South Kolkata</button>
+      <button class="filter-btn" data-filter="saltlake">🏰 Salt Lake & VIP Road</button>
+      <button class="filter-btn" data-filter="districts">🚆 Other Districts (Kalyani, Howrah, Hooghly, Siliguri)</button>
+      <button class="filter-btn" data-filter="sabeki">🕊️ Traditional / Sabeki</button>
+      <button class="filter-btn" data-filter="theme">🎭 Modern Thematic</button>
+    </div>
+  </div>
+
+  <div class="result-stat">
+    <span id="counterText">Showing 28 pandals</span>
+    <span>⚡ Tap "Get Directions" for instant Google Maps navigation</span>
+  </div>
+
+  <!-- Pandals Grid -->
+  <div class="pandal-grid" id="pandalGrid">
+    <!-- Populated by JavaScript -->
+  </div>
+
+  <!-- Pandal Hopping Suggested Routes -->
+  <div class="routes-section">
+    <h2 class="section-heading">🚶 Recommended Pandal Hopping Routes</h2>
+    <div class="routes-grid">
+      <div class="route-card">
+        <h3>🏛️ Trail 1: North Kolkata Heritage Walk</h3>
+        <p>Best for rich traditional culture, narrow historic lanes, and artistic craftsmanship.</p>
+        <ul class="route-steps">
+          <li>1️⃣ Sovabazar Rajbari (Metro: Sovabazar)</li>
+          <li>2️⃣ Kumartuli Park & Artisans Colony</li>
+          <li>3️⃣ Ahiritola Sarbojanin</li>
+          <li>4️⃣ Bagbazar Sarbojanin Ghat</li>
+          <li>5️⃣ College Square & Md. Ali Park</li>
+        </ul>
+      </div>
+
+      <div class="route-card">
+        <h3>🎨 Trail 2: South Kolkata Metro Sprint</h3>
+        <p>Best for avant-garde theme designs, lighting spectacles, and grand art installations.</p>
+        <ul class="route-steps">
+          <li>1️⃣ Suruchi Sangha (New Alipore)</li>
+          <li>2️⃣ Chetla Agrani (Metro: Kalighat)</li>
+          <li>3️⃣ Deshapriya Park & Tridhara Sammilani</li>
+          <li>4️⃣ Ekdalia Evergreen & Singhi Park</li>
+          <li>5️⃣ Mudiali Club & Shib Mandir</li>
+        </ul>
+      </div>
+
+      <div class="route-card">
+        <h3>✨ Trail 3: VIP Road & Salt Lake Circuit</h3>
+        <p>Famous for colossal palace/monument replicas and massive light displays.</p>
+        <ul class="route-steps">
+          <li>1️⃣ Sree Bhumi Sporting Club (VIP Road)</li>
+          <li>2️⃣ Lake Town Adhibasi Brinda</li>
+          <li>3️⃣ Dum Dum Park Bharat Chakra</li>
+          <li>4️⃣ Dum Dum Park Tarun Sangha</li>
+          <li>5️⃣ Salt Lake FD & BJ Block</li>
+        </ul>
+      </div>
+
+      <div class="route-card">
+        <h3>🚅 Trail 4: District Mega Wonders</h3>
+        <p>Iconic pandals in neighboring districts that draw millions every year.</p>
+        <ul class="route-steps">
+          <li>1️⃣ Kalyani ITI More (Luminous Park, Nadia)</li>
+          <li>2️⃣ Barasat Sandhani Club (North 24 Pgs)</li>
+          <li>3️⃣ Chandannagar Strand (Hooghly Lighting)</li>
+          <li>4️⃣ Shibpur Mandirtala (Howrah)</li>
+          <li>5️⃣ Dadabhai Sporting Club (Siliguri)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Useful Info & Helplines -->
+  <div class="routes-section" style="margin-top: 30px;">
+    <h2 class="section-heading">ℹ️ Important Traveler Tips & Emergency Helplines</h2>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <h4>🚇 All-Night Kolkata Metro</h4>
+        <p>Blue Line (Dakshineswar - Kavi Subhash) runs special night trains on Saptami, Ashtami, and Navami, running past 4:00 AM.</p>
+      </div>
+      <div class="tip-card">
+        <h4>🕒 Ideal Timing</h4>
+        <p><strong>10 AM – 3 PM:</strong> Easy walking, minimal queues, great for photography.<br><strong>6 PM – 4 AM:</strong> Full carnival energy and breathtaking illumination.</p>
+      </div>
+      <div class="tip-card">
+        <h4>🚨 Kolkata Police Helpline</h4>
+        <p>Dial <strong>100</strong> / <strong>112</strong> for emergency. Women helpline: <strong>1091</strong>. Kolkata Traffic Control: <strong>033-2214-3644</strong>.</p>
+      </div>
+      <div class="tip-card">
+        <h4>👟 Pandal Hopping Essentials</h4>
+        <p>Wear comfortable walking shoes, carry a water bottle, keep loose cash or UPI ready, and save offline transit maps on your phone.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer style="text-align:center; padding:35px 20px; color:#9ca3af; font-size:13.5px; position:relative; z-index:1;">
+  © 2026 Winter Guidance | Celebrating West Bengal's Greatest Cultural Festival 🌸
+</footer>
+
+<script>
+// PANDAL DATA DIRECTORY
+const pandals = [
+  // NORTH & CENTRAL KOLKATA
+  {
+    name: "Bagbazar Sarbojanin Durgotsav",
+    zone: "north",
+    zoneLabel: "North Kolkata",
+    style: "sabeki",
+    styleLabel: "Traditional (Sabeki)",
+    location: "Bagbazar, Shyambazar",
+    metro: "Shyambazar Metro (5 min walk)",
+    theme: "One of Bengal's oldest community pujas (since 1919). World-renowned for its serene traditional 'Ekchala' Pratima and authentic aristocratic Bengali rituals.",
+    bestTime: "Early Morning (Ashtami Anjali) or Evening",
+    mapsQuery: "Bagbazar Sarbojanin Durgotsav Kolkata"
+  },
+  {
+    name: "Kumartuli Park",
+    zone: "north",
+    zoneLabel: "North Kolkata",
+    style: "theme",
+    styleLabel: "Thematic Art",
+    location: "Kumartuli, Sovabazar",
+    metro: "Sovabazar Sutanuti Metro (6 min walk)",
+    theme: "Situated adjacent to Kolkata's famous clay sculptors' colony. Renowned for fusion of grand themes and traditional artisan mastery.",
+    bestTime: "Afternoon or Late Night",
+    mapsQuery: "Kumartuli Park Durga Puja Kolkata"
+  },
+  {
+    name: "College Square",
+    zone: "north",
+    zoneLabel: "Central Kolkata",
+    style: "theme",
+    styleLabel: "Illumination / Water Replica",
+    location: "53 College Street, Near Calcutta University",
+    metro: "Central / Mahatma Gandhi Road Metro",
+    theme: "Majestic palace replica erected over the large heritage lake. The reflection of thousands of Chandannagar lights glistening in the water is breathtaking.",
+    bestTime: "8:00 PM - 2:00 AM (for lighting)",
+    mapsQuery: "College Square Durga Puja Kolkata"
+  },
+  {
+    name: "Mohammad Ali Park",
+    zone: "north",
+    zoneLabel: "Central Kolkata",
+    style: "theme",
+    styleLabel: "Architectural Replica",
+    location: "MG Road, Central Kolkata",
+    metro: "MG Road Metro (3 min walk)",
+    theme: "Spectacular large-scale architectural replicas of famous temples and palaces from across the world, coupled with grand idol ornamentation.",
+    bestTime: "Night time (9 PM - 3 AM)",
+    mapsQuery: "Mohammad Ali Park Durga Puja Kolkata"
+  },
+  {
+    name: "Santosh Mitra Square (Lebutala)",
+    zone: "north",
+    zoneLabel: "Central Kolkata",
+    style: "theme",
+    styleLabel: "High-Tech Spectacle",
+    location: "Lebutala, Bowbazar",
+    metro: "Central / Sealdah Metro",
+    theme: "Known for viral mega installations such as the Las Vegas Sphere replica, Ram Mandir, and cutting-edge 3D illumination systems.",
+    bestTime: "Midnight to dawn to avoid heaviest queue",
+    mapsQuery: "Santosh Mitra Square Lebutala Kolkata"
+  },
+  {
+    name: "Ahiritola Sarbojanin Durgotsab",
+    zone: "north",
+    zoneLabel: "North Kolkata",
+    style: "theme",
+    styleLabel: "Artistic Heritage",
+    location: "BK Paul Avenue, Ahiritola",
+    metro: "Sovabazar Sutanuti Metro",
+    theme: "Celebrated for deep sociological and artistic concepts reflecting folk culture, clay art, and Bengali rural traditions.",
+    bestTime: "Afternoon or Evening",
+    mapsQuery: "Ahiritola Sarbojanin Durgotsab Kolkata"
+  },
+  {
+    name: "Sovabazar Rajbari",
+    zone: "north",
+    zoneLabel: "North Kolkata",
+    style: "sabeki",
+    styleLabel: "Royal Bonedi Bari",
+    location: "Raja Nabakrishna Street, Sovabazar",
+    metro: "Sovabazar Sutanuti Metro (2 min walk)",
+    theme: "Founded in 1757 by Raja Nabakrishna Deb. Witness centuries-old royal Zamindari rituals, cannon gun salutes on Sandhi Puja, and historic Thanthania traditions.",
+    bestTime: "Morning rituals & Sandhi Puja",
+    mapsQuery: "Sovabazar Rajbari Kolkata"
+  },
+  {
+    name: "Kashi Bose Lane",
+    zone: "north",
+    zoneLabel: "North Kolkata",
+    style: "theme",
+    styleLabel: "Societal Theme",
+    location: "Maniktala, North Kolkata",
+    metro: "Girish Park / Sovabazar Metro",
+    theme: "Multi-award-winning pandal famous for thought-provoking humanitarian themes, intricate organic materials, and emotive idol design.",
+    bestTime: "Late Night (12 AM - 4 AM)",
+    mapsQuery: "Kashi Bose Lane Durga Puja Samity Kolkata"
+  },
+  {
+    name: "Hatibagan Sarbojanin",
+    zone: "north",
+    zoneLabel: "North Kolkata",
+    style: "theme",
+    styleLabel: "Creative Nostalgia",
+    location: "Hatibagan Market Crossing",
+    metro: "Shyambazar Metro (3 min walk)",
+    theme: "Famed for recreating old Kolkata heritage, nostalgic retro installations, and innovative handcrafted structural elements.",
+    bestTime: "Evening (7 PM - 12 AM)",
+    mapsQuery: "Hatibagan Sarbojanin Durga Puja Kolkata"
+  },
+  {
+    name: "Chaltabagan Sarbojanin",
+    zone: "north",
+    zoneLabel: "North Kolkata",
+    style: "theme",
+    styleLabel: "Dhak & Glass Craft",
+    location: "Amherst Street / Maniktala",
+    metro: "Girish Park / Central Metro",
+    theme: "Famed for vibrant Sindoor Khela, Dhunuchi dance contests, and eco-friendly artistic marvels crafted with brass, bell-metal, and glass.",
+    bestTime: "Evening to Midnight",
+    mapsQuery: "Manicktalla Chaltabagan Lohapatty Durga Puja"
+  },
+
+  // SOUTH KOLKATA
+  {
+    name: "Suruchi Sangha",
+    zone: "south",
+    zoneLabel: "South Kolkata",
+    style: "theme",
+    styleLabel: "Cultural State Showcase",
+    location: "New Alipore",
+    metro: "Majerhat / Taratala / Kalighat Metro",
+    theme: "Each year highlights the exquisite art, architecture, and folklore of an Indian state or environmental awareness with immersive thematic music.",
+    bestTime: "Daytime (11 AM - 3 PM) or Late Night",
+    mapsQuery: "Suruchi Sangha Durga Puja New Alipore Kolkata"
+  },
+  {
+    name: "Chetla Agrani Club",
+    zone: "south",
+    zoneLabel: "South Kolkata",
+    style: "theme",
+    styleLabel: "Fine Sculptural Art",
+    location: "Chetla, Kalighat",
+    metro: "Kalighat Metro / Netaji Bhavan Metro",
+    theme: "Renowned for rustic handicrafts, temple murals, and breathtaking creative idols sculpted by master artists like Subrata Banerjee.",
+    bestTime: "Midnight to 3 AM",
+    mapsQuery: "Chetla Agrani Club Durga Puja Kolkata"
+  },
+  {
+    name: "Deshapriya Park",
+    zone: "south",
+    zoneLabel: "South Kolkata",
+    style: "theme",
+    styleLabel: "Gigantic Architecture",
+    location: "Rashbehari Avenue, Kalighat",
+    metro: "Kalighat Metro (5 min walk)",
+    theme: "Massive open-air grounds featuring monumental architectural replicas such as South Indian Dravidian temples or ancient Thai palaces.",
+    bestTime: "Night time",
+    mapsQuery: "Deshapriya Park Durga Puja Kolkata"
+  },
+  {
+    name: "Ekdalia Evergreen Club",
+    zone: "south",
+    zoneLabel: "South Kolkata",
+    style: "sabeki",
+    styleLabel: "Temple Replica & Sabeki",
+    location: "Gariahat, Ballygunge",
+    metro: "Kalighat Metro (take auto to Gariahat)",
+    theme: "Preserves the pristine traditional golden idol inside gigantic architectural replicas of Indian heritage temples, illuminated by Chandannagar light artisans.",
+    bestTime: "Evening (7 PM - 2 AM)",
+    mapsQuery: "Ekdalia Evergreen Club Kolkata"
+  },
+  {
+    name: "Singhi Park Sarbojanin",
+    zone: "south",
+    zoneLabel: "South Kolkata",
+    style: "sabeki",
+    styleLabel: "Traditional Grandeur",
+    location: "Dover Lane, Gariahat",
+    metro: "Kalighat Metro / Ballygunge Station",
+    theme: "Over 80 years of legacy. Beautiful traditional idols with dazzling chandeliers, authentic decor, and classical lighting displays.",
+    bestTime: "Evening (6 PM - 11 PM)",
+    mapsQuery: "Singhi Park Durga Puja Kolkata"
+  },
+  {
+    name: "Ballygunge Cultural Association",
+    zone: "south",
+    zoneLabel: "South Kolkata",
+    style: "theme",
+    styleLabel: "Eco-Art & Folk",
+    location: "Hemanta Mukherjee Sarani, Ballygunge",
+    metro: "Kalighat Metro / Hemanta Mukherjee Metro",
+    theme: "Sophisticated blend of environmental sensitivity, rural folklore, hand-woven fabrics, and soul-stirring classical music score.",
+    bestTime: "Late afternoon or evening",
+    mapsQuery: "Ballygunge Cultural Association Kolkata"
+  },
+  {
+    name: "Tridhara Sammilani",
+    zone: "south",
+    zoneLabel: "South Kolkata",
+    style: "theme",
+    styleLabel: "Bold Contemporary",
+    location: "Manohar Pukur Road, Dover Terrace",
+    metro: "Kalighat Metro / Rabindra Sarobar Metro",
+    theme: "A pioneer of avant-garde fusion where philosophy, modern tribal art, and classical Vedic traditions merge seamlessly.",
+    bestTime: "Late Night (1 AM - 4 AM)",
+    mapsQuery: "Tridhara Sammilani Durga Puja Kolkata"
+  },
+  {
+    name: "Mudiali Club",
+    zone: "south",
+    zoneLabel: "South Kolkata",
+    style: "theme",
+    styleLabel: "Elegant Illumination",
+    location: "Near Southern Avenue, Tollygunge",
+    metro: "Rabindra Sarobar Metro (5 min walk)",
+    theme: "Famous for harmonious color palettes, sophisticated illumination geometry, and peaceful aesthetic atmosphere near the lakes.",
+    bestTime: "Evening or Night",
+    mapsQuery: "Mudiali Club Durga Puja Kolkata"
+  },
+  {
+    name: "Shib Mandir Sarbojanin",
+    zone: "south",
+    zoneLabel: "South Kolkata",
+    style: "theme",
+    styleLabel: "Conceptual Design",
+    location: "Lake Temple Road, Rabindra Sarobar",
+    metro: "Rabindra Sarobar Metro",
+    theme: "Consistent winner of top design awards for innovative spatial concepts and handcrafted installations.",
+    bestTime: "Late Night",
+    mapsQuery: "Shib Mandir Sarbojanin Durgotsab Kolkata"
+  },
+  {
+    name: "Badamtala Ashar Sangha",
+    zone: "south",
+    zoneLabel: "South Kolkata",
+    style: "theme",
+    styleLabel: "Theme Pioneer",
+    location: "Nepal Bhattacharjee Street, Kalighat",
+    metro: "Kalighat Metro (3 min walk)",
+    theme: "One of South Kolkata's earliest trailblazers in thematic installations. Renowned for minimalism and powerful artistic messages.",
+    bestTime: "Late evening or midnight",
+    mapsQuery: "Badamtala Ashar Sangha Kolkata"
+  },
+  {
+    name: "Naktala Udayan Sangha",
+    zone: "south",
+    zoneLabel: "South Kolkata",
+    style: "theme",
+    styleLabel: "Grand Experimental Art",
+    location: "Naktala, Gitanjali Metro",
+    metro: "Gitanjali (Naktala) Metro",
+    theme: "Famous for massive experimental concepts, kinetic sculptures, butterfly motifs, and cutting-edge lighting design.",
+    bestTime: "Midnight to 3 AM",
+    mapsQuery: "Naktala Udayan Sangha Kolkata"
+  },
+  {
+    name: "Babubagan Sarbojanin",
+    zone: "south",
+    zoneLabel: "South Kolkata",
+    style: "theme",
+    styleLabel: "Historic Numismatic Art",
+    location: "Dhakuria, South Kolkata",
+    metro: "Dhakuria Railway / Kavi Subhash line",
+    theme: "Renowned for innovative artistic concepts using commemorative coins, heritage postal stamps, and temple replicas.",
+    bestTime: "Evening",
+    mapsQuery: "Babubagan Sarbojanin Durgotsav Dhakuria Kolkata"
+  },
+
+  // SALT LAKE, VIP ROAD & LAKE TOWN
+  {
+    name: "Sree Bhumi Sporting Club",
+    zone: "saltlake",
+    zoneLabel: "VIP Road / Lake Town",
+    style: "theme",
+    styleLabel: "Colossal Monument Replica",
+    location: "Lake Town, VIP Road",
+    metro: "Ultadanga / Belgachia Metro",
+    theme: "Bengal's biggest viral spectacle. Famed for breathtaking replicas like Burj Khalifa, Vatican City, Disneyland, and Ayodhya Ram Mandir with real gold jewelry on the deity.",
+    bestTime: "Daytime or 2 AM to 5 AM to bypass peak rush",
+    mapsQuery: "Sree Bhumi Sporting Club Lake Town Kolkata"
+  },
+  {
+    name: "Dum Dum Park Bharat Chakra",
+    zone: "saltlake",
+    zoneLabel: "Lake Town / Dum Dum",
+    style: "theme",
+    styleLabel: "Conceptual Fine Art",
+    location: "Dum Dum Park",
+    metro: "Dum Dum Metro / VIP Road",
+    theme: "Stands out for deep social concepts, indigenous terracotta and straw work, and extraordinary attention to sculptural detail.",
+    bestTime: "Evening to Midnight",
+    mapsQuery: "Dum Dum Park Bharat Chakra Kolkata"
+  },
+  {
+    name: "Dum Dum Park Tarun Sangha",
+    zone: "saltlake",
+    zoneLabel: "Lake Town / Dum Dum",
+    style: "theme",
+    styleLabel: "Contemporary Art",
+    location: "Dum Dum Park",
+    metro: "Dum Dum Metro",
+    theme: "Celebrated for bold color schemes, contemporary sculptures, and creative lighting that captivates art lovers.",
+    bestTime: "Night time",
+    mapsQuery: "Dum Dum Park Tarun Sangha Kolkata"
+  },
+  {
+    name: "Salt Lake FD Block",
+    zone: "saltlake",
+    zoneLabel: "Salt Lake City",
+    style: "theme",
+    styleLabel: "Mega Replica & Mela",
+    location: "FD Block, Sector III, Salt Lake",
+    metro: "Karunamoyee / Central Park Metro (Green Line)",
+    theme: "Massive fairy-tale palaces, tribal architecture replicas, and an expansive festive fairground (mela) with Bengali snacks.",
+    bestTime: "Evening (6 PM - 11 PM)",
+    mapsQuery: "FD Block Durga Puja Salt Lake Kolkata"
+  },
+  {
+    name: "Salt Lake BJ Block",
+    zone: "saltlake",
+    zoneLabel: "Salt Lake City",
+    style: "theme",
+    styleLabel: "Community Heritage",
+    location: "BJ Block, Sector II, Salt Lake",
+    metro: "Karunamoyee Metro (Green Line)",
+    theme: "Vibrant family carnival atmosphere featuring exquisite structural artistry and festive cultural performances.",
+    bestTime: "Evening",
+    mapsQuery: "BJ Block Durga Puja Salt Lake Kolkata"
+  },
+
+  // DISTRICTS OF WEST BENGAL
+  {
+    name: "Kalyani ITI More (Luminous Park)",
+    zone: "districts",
+    zoneLabel: "Nadia District",
+    style: "theme",
+    styleLabel: "Skyline Temple Wonder",
+    location: "ITI More, Kalyani, Nadia",
+    metro: "Kalyani Railway Station (Direct Sealdah local)",
+    theme: "West Bengal's most talked-about district mega-puja. Features skyscraper-sized replicas: Malaysia Grand Mosque, Kedarnath Temple, and Twin Towers reaching over 100 feet.",
+    bestTime: "Evening or late night (prepare for large crowds)",
+    mapsQuery: "Kalyani ITI More Durga Puja Nadia"
+  },
+  {
+    name: "Barasat Sandhani Club",
+    zone: "districts",
+    zoneLabel: "North 24 Parganas",
+    style: "theme",
+    styleLabel: "Laser & Architectural Wonder",
+    location: "KNC Road, Barasat",
+    metro: "Barasat Railway Station / Noapara Metro connect",
+    theme: "Renowned for gigantic pandal heights, futuristic dynamic laser light shows, and realistic international monument copies.",
+    bestTime: "Night (8 PM - 3 AM)",
+    mapsQuery: "Sandhani Club Barasat Durga Puja"
+  },
+  {
+    name: "Chandannagar Strand Durga Pujas",
+    zone: "districts",
+    zoneLabel: "Hooghly District",
+    style: "theme",
+    styleLabel: "World-Famous Illumination",
+    location: "Chandannagar Strand Road, Hooghly",
+    metro: "Chandannagar Railway Station (Howrah main line)",
+    theme: "Home to the world's finest LED wire artists. Incredible mechanized light gates portraying current events, mythology, and fairy tales along the Hooghly riverbank.",
+    bestTime: "Evening after sunset",
+    mapsQuery: "Chandannagar Strand Hooghly West Bengal"
+  },
+  {
+    name: "Shibpur Mandirtala Sarbojanin",
+    zone: "districts",
+    zoneLabel: "Howrah District",
+    style: "theme",
+    styleLabel: "Heritage & Art",
+    location: "Mandirtala, Shibpur, Howrah",
+    metro: "Howrah Railway Station / Vidyasagar Setu toll",
+    theme: "Howrah's crown jewel puja located near Vidyasagar Setu. Features creative handicraft themes and community unity.",
+    bestTime: "Evening (7 PM - 1 AM)",
+    mapsQuery: "Mandirtala Durga Puja Shibpur Howrah"
+  },
+  {
+    name: "Dadabhai Sporting Club",
+    zone: "districts",
+    zoneLabel: "Siliguri / North Bengal",
+    style: "theme",
+    styleLabel: "North Bengal Crown",
+    location: "Deshbandhu Para, Siliguri",
+    metro: "Siliguri Town / NJP Railway Station",
+    theme: "The flagship puja of North Bengal, famous for grand multi-tier pandals, eco-friendly natural materials, and scenic hill-gateway celebrations.",
+    bestTime: "Evening to Midnight",
+    mapsQuery: "Dadabhai Sporting Club Siliguri Durga Puja"
+  }
+];
+
+// RENDER FUNCTION
+const pandalGrid = document.getElementById("pandalGrid");
+const counterText = document.getElementById("counterText");
+const searchInput = document.getElementById("pandalSearch");
+const filterBtns = document.querySelectorAll(".filter-btn");
+
+let currentFilter = "all";
+let currentSearch = "";
+
+function renderPandals() {
+  pandalGrid.innerHTML = "";
+
+  const filtered = pandals.filter(p => {
+    // Category filter
+    let matchCat = true;
+    if (currentFilter === "north") matchCat = (p.zone === "north");
+    else if (currentFilter === "south") matchCat = (p.zone === "south");
+    else if (currentFilter === "saltlake") matchCat = (p.zone === "saltlake");
+    else if (currentFilter === "districts") matchCat = (p.zone === "districts");
+    else if (currentFilter === "sabeki") matchCat = (p.style === "sabeki");
+    else if (currentFilter === "theme") matchCat = (p.style === "theme");
+
+    // Search filter
+    let matchSearch = true;
+    if (currentSearch.trim() !== "") {
+      const q = currentSearch.toLowerCase();
+      matchSearch = p.name.toLowerCase().includes(q) ||
+                    p.location.toLowerCase().includes(q) ||
+                    p.metro.toLowerCase().includes(q) ||
+                    p.theme.toLowerCase().includes(q) ||
+                    p.zoneLabel.toLowerCase().includes(q);
+    }
+
+    return matchCat && matchSearch;
+  });
+
+  counterText.textContent = `Showing ${filtered.length} of ${pandals.length} pandals`;
+
+  if (filtered.length === 0) {
+    pandalGrid.innerHTML = `
+      <div class="no-results">
+        <h3>🔍 No pandals found matching your query</h3>
+        <p style="margin-top:8px; font-size:14px;">Try searching for another area, metro station, or resetting your filter.</p>
+      </div>
+    `;
+    return;
+  }
+
+  filtered.forEach(p => {
+    const card = document.createElement("div");
+    card.className = "pandal-card";
+
+    let zoneClass = "zone-north";
+    if (p.zone === "south") zoneClass = "zone-south";
+    if (p.zone === "saltlake") zoneClass = "zone-vip";
+    if (p.zone === "districts") zoneClass = "zone-dist";
+
+    const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.mapsQuery)}`;
+
+    card.innerHTML = `
+      <div>
+        <div class="card-top">
+          <span class="zone-badge ${zoneClass}">${p.zoneLabel}</span>
+          <span class="tag-label">${p.styleLabel}</span>
+        </div>
+        <h3 class="pandal-title">${p.name}</h3>
+        <div class="pandal-location">📍 ${p.location}</div>
+        <div class="pandal-desc">${p.theme}</div>
+
+        <div class="meta-grid">
+          <div class="meta-item">
+            <strong>🚇 Transit:</strong>
+            <span>${p.metro}</span>
+          </div>
+          <div class="meta-item">
+            <strong>⏰ Best Time:</strong>
+            <span>${p.bestTime}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-actions">
+        <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" class="btn-map">
+          🧭 Get Directions on Google Maps
+        </a>
+      </div>
+    `;
+
+    pandalGrid.appendChild(card);
+  });
+}
+
+// EVENTS
+filterBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    filterBtns.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    currentFilter = btn.dataset.filter;
+    renderPandals();
+  });
+});
+
+searchInput.addEventListener("input", (e) => {
+  currentSearch = e.target.value;
+  renderPandals();
+});
+
+// INITIAL RENDER
+renderPandals();
+
+// Confetti animation
+for(let i = 0; i < 25; i++) {
+  let conf = document.createElement("div");
+  conf.className = "confetti";
+  conf.innerHTML = i % 2 === 0 ? "🌸" : "✨";
+  conf.style.left = Math.random() * 100 + "vw";
+  conf.style.fontSize = (Math.random() * 12 + 14) + "px";
+  conf.style.opacity = Math.random() * 0.7 + 0.3;
+  conf.style.animationDuration = (Math.random() * 7 + 6) + "s";
+  document.body.appendChild(conf);
+}
+</script>
+
+</body>
+</html>

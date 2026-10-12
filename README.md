@@ -9,6 +9,7 @@ A professional web development project showcasing modern frontend techniques, re
 ## 🚀 Features
 - **Responsive Design:** Optimized for mobile, tablet, and desktop views.
 - **Modern UI/UX:** Clean, intuitive interface.
+- **Durga Puja Pandals Directory:** Comprehensive West Bengal pandals guide with search, zone filters, transit routes, and Google Maps integration.
 - **Netlify Integration:** Continuous deployment for real-time updates.
 
 ## 🛠️ Tech Stack
