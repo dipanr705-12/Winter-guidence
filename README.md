@@ -2,7 +2,9 @@
 
 A professional web development project showcasing modern frontend techniques, responsive design, and clean code practices.
 
-**🌐 Live Demo:** [https://sparkling-macaron-78a7c6.netlify.app](https://sparkling-macaron-78a7c6.netlify.app)
+**🌐 Live Demo:** [https://sparkling-macaron-78a7c6.netlify.app](https://sparkling-macaron-78a7c6.netlify.app)  
+**🔱 Durga Puja Guide:** [https://sparkling-macaron-78a7c6.netlify.app/durga-puja-pandals.html](https://sparkling-macaron-78a7c6.netlify.app/durga-puja-pandals.html)  
+**🚀 GitHub Pages Live:** [https://dipanr705-12.github.io/Winter-guidence/](https://dipanr705-12.github.io/Winter-guidence/)
 
 ---
 
